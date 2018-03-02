@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evMenu</name>
+    <events>
+        <comment>PRELOAD SOUNDS</comment>
+        <event-block sid="922046551175142">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="278489681627355" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="124618130391733" type="Audio">
+                    <param id="0" name="Audio file">Dying</param>
+                </action>
+                <action id="4" name="Preload" sid="601564327866460" type="Audio">
+                    <param id="0" name="Audio file">Music</param>
+                </action>
+                <action id="4" name="Preload" sid="558040285010633" type="Audio">
+                    <param id="0" name="Audio file">Player1</param>
+                </action>
+                <action id="4" name="Preload" sid="889225907040523" type="Audio">
+                    <param id="0" name="Audio file">Player2</param>
+                </action>
+                <action id="4" name="Preload" sid="191967356677902" type="Audio">
+                    <param id="0" name="Audio file">Rapidfire 9mm</param>
+                </action>
+                <action id="4" name="Preload" sid="122831633280883" type="Audio">
+                    <param id="0" name="Audio file">Shells falls</param>
+                </action>
+                <action id="4" name="Preload" sid="223060773739387" type="Audio">
+                    <param id="0" name="Audio file">Shoot 9mm</param>
+                </action>
+                <action id="4" name="Preload" sid="255726409346493" type="Audio">
+                    <param id="0" name="Audio file">Shoot silencer</param>
+                </action>
+                <action id="4" name="Preload" sid="224241047290515" type="Audio">
+                    <param id="0" name="Audio file">Tie</param>
+                </action>
+                <action id="4" name="Preload" sid="343398518979876" type="Audio">
+                    <param id="0" name="Audio file">Winner</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>SELECT PLAYER MODE</comment>
+        <event-block sid="484562480329737">
+            <conditions>
+                <condition id="3" name="On touched object" sid="662419919364033" type="Touch">
+                    <param id="0" name="Object">Hud_SelectMode</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="516764178298356" type="System" />
+            </actions>
+            <sub-events>
+                <event-block sid="221403609861820">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="782091555275342" type="Hud_SelectMode">
+                            <param id="0" name="Instance variable">Players</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="696202434085665" type="System">
+                            <param id="0" name="Variable">Computer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="952699542783763">
+                    <conditions />
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="474686817109085" type="System">
+                            <param id="0" name="Layout">Game</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>SOUNDS</comment>
+        <event-block sid="740978957417619">
+            <conditions>
+                <condition id="3" name="On touched object" sid="133124273267806" type="Touch">
+                    <param id="0" name="Object">Hud_Audio</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="296373606551519" type="Hud_Audio">
+                    <param id="0" name="Frame number">(Self.AnimationFrame + 1)%2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
