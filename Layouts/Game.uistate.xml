@@ -4,18 +4,18 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>644.43</position-x>
-        <position-y>335.852</position-y>
-        <position-z>194.872</position-z>
-        <lookat-x>644.43</lookat-x>
-        <lookat-y>335.852</lookat-y>
+        <position-x>480</position-x>
+        <position-y>250.977</position-y>
+        <position-z>88.7921</position-z>
+        <lookat-x>480</lookat-x>
+        <lookat-y>250.977</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>1</snap-to-grid>
     <show-grid>1</show-grid>
     <snap-width>32</snap-width>
     <snap-height>32</snap-height>
-    <show-collision-polys>0</show-collision-polys>
+    <show-collision-polys>1</show-collision-polys>
     <translucent-inactive-layers>0</translucent-inactive-layers>
     <properties>
         <property expanded="1" name="Layout properties" />
@@ -23,11 +23,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Buttons" />
+    <active-layer name="Dim" />
     <layers>
         <layer locked="0" name="Bg" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Grid" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Buttons" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Dim" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Display" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Hud" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

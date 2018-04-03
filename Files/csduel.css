@@ -1,0 +1,18 @@
+#txt {
+	/* font-family: "Black Ops One"; */
+	font-weight: bold;
+	color: #000000 !important;
+	font-size: 15px;
+	padding: 5px;
+	box-shadow: 2px 2px 1px #272E33;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 2px solid #000000;
+	background: #ffffff;
+}
+
+.testbutton:hover {
+  color: #14396A !important;
+  background: #468CCF;
+}

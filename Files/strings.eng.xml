@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<string id='subtitle'>Move, Shoot and Win!</string>
+	<string id='play1'>Player vs CPU</string>
+	<string id='play2'>Player vs Player</string>
+	<string id='move'>Moves</string>
+	<string id='staff'>Credits</string>
+	<string id='develop'>Developed by</string>
+	<string id='design'>Designed by</string>
+	<string id='engine'>Engine</string>
+	<string id='graphics'>Graphics</string>
+	<string id='sounds'>Sounds</string>
+</strings>

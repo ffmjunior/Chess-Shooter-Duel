@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>evGlobal</name>
+    <events>
+        <event-block sid="533052948554540">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="660978658036561" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="608308592453315" type="tx">
+                    <param id="0" name="Family name">&quot;black_ops_oneregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;fonts.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="934684349662501">
+            <conditions>
+                <condition id="3" name="On touched object" sid="366334247242474" type="Touch">
+                    <param id="0" name="Object">buExit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="502939966099235" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="300942582070133">
+            <conditions>
+                <condition id="3" name="On touched object" sid="773621724525508" type="Touch">
+                    <param id="0" name="Object">buBack</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="524635462756514" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="934505395167383">
+            <conditions>
+                <condition id="3" name="On touched object" sid="432478477737272" type="Touch">
+                    <param id="0" name="Object">buAudio</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="219430155450907" type="buAudio">
+                    <param id="0" name="Frame number">(Self.AnimationFrame + 1)%2</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="151368046749626">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="286327667324690" type="buAudio">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="443062578652506" type="Audio">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="868317964047290">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="486486072899503" type="buAudio">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="678710037171989" type="Audio">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="528797408804205">
+            <conditions>
+                <condition id="3" name="On touched object" sid="165090770369833" type="Touch">
+                    <param id="0" name="Object">buMusic</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="525159369421850" type="buMusic">
+                    <param id="0" name="Frame number">(Self.AnimationFrame + 1)%4</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="289115142362423">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="400832498719840" type="buMusic">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="664024778074863" type="Audio">
+                            <param id="0" name="Audio file">BgMusic1</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Music1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="630120664442265">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="724850053379260" type="buMusic">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="457335982084225" type="Audio">
+                            <param id="0" name="Tag">&quot;Music1&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="351670170188675" type="Audio">
+                            <param id="0" name="Audio file">BgMusic2</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Music2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="760450885250636">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="605806568279527" type="buMusic">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="830899379267877" type="Audio">
+                            <param id="0" name="Tag">&quot;Music2&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="727889796918500" type="Audio">
+                            <param id="0" name="Audio file">BgMusic3</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Music3&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="998516833621683">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="938236032613933" type="buMusic">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="308717453279376" type="Audio">
+                            <param id="0" name="Tag">&quot;Music1&quot; &amp; &quot;Music2&quot; &amp; &quot;Music3&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="118086670145383">
+            <conditions>
+                <condition id="0" name="On function" sid="209247969346945" type="Function">
+                    <param id="0" name="Name">&quot;ChangeText&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="520871878294589" type="AJAX">
+                    <param id="0" name="Tag">&quot;Search&quot;</param>
+                    <param id="1" name="URL">&quot;strings.&quot;&amp; Language &amp; &quot;.xml&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="975802234633353">
+            <conditions>
+                <condition id="0" name="On completed" sid="320575812703448" type="AJAX">
+                    <param id="0" name="Tag">&quot;Search&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="259137494182324" type="XML">
+                    <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="845018609907836">
+            <conditions>
+                <condition id="0" name="On function" sid="118185289162297" type="Function">
+                    <param id="0" name="Name">&quot;GetText&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="664593825110384" type="Function">
+                    <param id="0" name="Value">XML.StringValue(&quot;/strings/string[@id=&apos;&quot; &amp; Function.Param(0)&amp;&quot;&apos;]/text()&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

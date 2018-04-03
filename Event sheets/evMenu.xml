@@ -3,92 +3,309 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evMenu</name>
     <events>
-        <comment>PRELOAD SOUNDS</comment>
-        <event-block sid="922046551175142">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="278489681627355" type="System" />
-            </conditions>
-            <actions>
-                <action id="4" name="Preload" sid="124618130391733" type="Audio">
-                    <param id="0" name="Audio file">Dying</param>
-                </action>
-                <action id="4" name="Preload" sid="601564327866460" type="Audio">
-                    <param id="0" name="Audio file">Music</param>
-                </action>
-                <action id="4" name="Preload" sid="558040285010633" type="Audio">
-                    <param id="0" name="Audio file">Player1</param>
-                </action>
-                <action id="4" name="Preload" sid="889225907040523" type="Audio">
-                    <param id="0" name="Audio file">Player2</param>
-                </action>
-                <action id="4" name="Preload" sid="191967356677902" type="Audio">
-                    <param id="0" name="Audio file">Rapidfire 9mm</param>
-                </action>
-                <action id="4" name="Preload" sid="122831633280883" type="Audio">
-                    <param id="0" name="Audio file">Shells falls</param>
-                </action>
-                <action id="4" name="Preload" sid="223060773739387" type="Audio">
-                    <param id="0" name="Audio file">Shoot 9mm</param>
-                </action>
-                <action id="4" name="Preload" sid="255726409346493" type="Audio">
-                    <param id="0" name="Audio file">Shoot silencer</param>
-                </action>
-                <action id="4" name="Preload" sid="224241047290515" type="Audio">
-                    <param id="0" name="Audio file">Tie</param>
-                </action>
-                <action id="4" name="Preload" sid="343398518979876" type="Audio">
-                    <param id="0" name="Audio file">Winner</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>SELECT PLAYER MODE</comment>
-        <event-block sid="484562480329737">
-            <conditions>
-                <condition id="3" name="On touched object" sid="662419919364033" type="Touch">
-                    <param id="0" name="Object">Hud_SelectMode</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-21" name="Reset global variables" sid="516764178298356" type="System" />
-            </actions>
+        <include>evGlobal</include>
+        <variable constant="0" name="Language" sid="549682877004386" static="0" type="text">por</variable>
+        <event-group description="" sid="872196790338099" title="Start Menu">
             <sub-events>
-                <event-block sid="221403609861820">
+                <event-block sid="922046551175142">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="782091555275342" type="Hud_SelectMode">
-                            <param id="0" name="Instance variable">Players</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
+                        <condition id="-2" name="On start of layout" sid="278489681627355" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="696202434085665" type="System">
-                            <param id="0" name="Variable">Computer</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="4" name="Preload" sid="903413835864555" type="Audio">
+                            <param id="0" name="Audio file">BgMusic1</param>
+                        </action>
+                        <action id="4" name="Preload" sid="934604192797535" type="Audio">
+                            <param id="0" name="Audio file">BgMusic2</param>
+                        </action>
+                        <action id="4" name="Preload" sid="169537781727606" type="Audio">
+                            <param id="0" name="Audio file">BgMusic3</param>
+                        </action>
+                        <action id="4" name="Preload" sid="124618130391733" type="Audio">
+                            <param id="0" name="Audio file">Dying</param>
+                        </action>
+                        <action id="4" name="Preload" sid="558040285010633" type="Audio">
+                            <param id="0" name="Audio file">Player1</param>
+                        </action>
+                        <action id="4" name="Preload" sid="889225907040523" type="Audio">
+                            <param id="0" name="Audio file">Player2</param>
+                        </action>
+                        <action id="4" name="Preload" sid="122831633280883" type="Audio">
+                            <param id="0" name="Audio file">ShellsFalls</param>
+                        </action>
+                        <action id="4" name="Preload" sid="223060773739387" type="Audio">
+                            <param id="0" name="Audio file">Shot9mm</param>
+                        </action>
+                        <action id="4" name="Preload" sid="224241047290515" type="Audio">
+                            <param id="0" name="Audio file">Tie</param>
+                        </action>
+                        <action id="4" name="Preload" sid="343398518979876" type="Audio">
+                            <param id="0" name="Audio file">Winner</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="952699542783763">
-                    <conditions />
+                <event-block sid="690513608834615">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="164806669327140" type="System" />
+                    </conditions>
                     <actions>
+                        <action id="5" name="Set frame" sid="837806968741868" type="huPlayer1">
+                            <param id="0" name="Frame number">huPlayer1.frame</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="929768239974282" type="huPlayer2">
+                            <param id="0" name="Frame number">huPlayer2.frame</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="804499414081017">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="196229351298084" type="Touch">
+                            <param id="0" name="Object">huPlayer1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="930924286679118" type="huPlayer1">
+                            <param id="0" name="Instance variable">frame</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="411813268705076">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="899494099312824" type="huPlayer1">
+                                    <param id="0" name="Instance variable">frame</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="296811206227651" type="huPlayer1">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="400198691013820" type="huPlayer1">
+                                    <param id="0" name="Instance variable">frame</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="693212009420075">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="891342065201365" type="Touch">
+                            <param id="0" name="Object">huPlayer2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="708772898714253" type="huPlayer2">
+                            <param id="0" name="Instance variable">frame</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="306062970071369">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="171911620031131" type="huPlayer2">
+                                    <param id="0" name="Instance variable">frame</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="557292649551120" type="huPlayer2">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="107870548675707" type="huPlayer2">
+                                    <param id="0" name="Instance variable">frame</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="738738084456644">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="569652509002329" type="Touch">
+                            <param id="0" name="Object">txPlay1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="516764178298356" type="System" />
+                        <action id="-9" name="Set value" sid="867957565086625" type="System">
+                            <param id="0" name="Variable">Computer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="474686817109085" type="System">
                             <param id="0" name="Layout">Game</param>
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="774122934939571">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="495005658670450" type="Touch">
+                            <param id="0" name="Object">txPlay2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="579285677832292" type="System" />
+                        <action id="-2" name="Go to layout" sid="215628253106753" type="System">
+                            <param id="0" name="Layout">Game</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="640289794641467">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="310302911404206" type="Touch">
+                            <param id="0" name="Object">buCredits</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="395143973771143" type="System">
+                            <param id="0" name="Layout">Credits</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
-        </event-block>
-        <comment>SOUNDS</comment>
-        <event-block sid="740978957417619">
-            <conditions>
-                <condition id="3" name="On touched object" sid="133124273267806" type="Touch">
-                    <param id="0" name="Object">Hud_Audio</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="296373606551519" type="Hud_Audio">
-                    <param id="0" name="Frame number">(Self.AnimationFrame + 1)%2</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
+        <event-group description="" sid="866744370159450" title="Language">
+            <sub-events>
+                <event-block sid="935030361881251">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="305489329730471" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="570035570998739" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="373980445043403">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="335627850712123" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="815536100370653" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="810930009991338">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="509656762077100" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="151080676515769" type="System">
+                            <param id="0" name="Variable">Language</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="794148252033129" type="Function">
+                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="416052471759454">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="613750670698955" type="Touch">
+                            <param id="0" name="Object">icLanguage</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="857075476270402" type="System">
+                            <param id="0" name="Variable">Language</param>
+                            <param id="1" name="Value">icLanguage.lang</param>
+                        </action>
+                        <action id="0" name="Set item" sid="958256845084701" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                            <param id="1" name="Value">Language</param>
+                        </action>
+                        <action id="0" name="Call function" sid="674870090125089" type="Function">
+                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="234892542458773">
+                    <conditions>
+                        <condition id="0" name="On function" sid="927090020933802" type="Function">
+                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="950470070606701" type="icLanguage">
+                            <param id="0" name="Animation">icLanguage.lang</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="609999937184494" type="Function">
+                            <param id="0" name="Name">&quot;ChangeText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="764772975933806" type="System">
+                            <param id="0" name="Seconds">0.05</param>
+                        </action>
+                        <action id="0" name="Call function" sid="814606370059739" type="Function">
+                            <param id="0" name="Name">&quot;ShowText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="905384853445796">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="752652200651165" type="icLanguage">
+                                    <param id="0" name="Instance variable">lang</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Language</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="679108074089281" type="buSelect">
+                                    <param id="0" name="X">icLanguage.X</param>
+                                    <param id="1" name="Y">icLanguage.Y</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="716529343198802" type="icLanguage">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="356341222062719">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="530043019124771" type="icLanguage">
+                                    <param id="0" name="Instance variable">lang</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">Language</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="135663354438482" type="icLanguage">
+                                    <param id="0" name="Opacity">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="418290784244119">
+                    <conditions>
+                        <condition id="0" name="On function" sid="383942882174258" type="Function">
+                            <param id="0" name="Name">&quot;ShowText&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="791283031360448" type="txSubtitle">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;subtitle&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="657778920528234" type="txPlay1">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;play1&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="452293077031445" type="txPlay2">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;play2&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

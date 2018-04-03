@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<string id='subtitle'>Mueve, Dispara y Vence!</string>
+	<string id='play1'>Jugador vs CPU</string>
+	<string id='play2'>Jugador vs Jugador</string>
+	<string id='move'>Movimientos</string>
+	<string id='staff'>Créditos</string>
+	<string id='develop'>Desarrollado por</string>
+	<string id='design'>Diseñado por</string>
+	<string id='engine'>Motor</string>
+	<string id='graphics'>Gráficos</string>
+	<string id='sounds'>Sonidos</string>
+</strings>

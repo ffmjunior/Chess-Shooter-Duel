@@ -3,44 +3,45 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evCredits</name>
     <events>
-        <comment>CREDITS URL</comment>
-        <event-block sid="269258550607214">
-            <conditions>
-                <condition id="3" name="On touched object" sid="672816666518763" type="Touch">
-                    <param id="0" name="Object">Txt_URL</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="8" name="Open URL in new window" sid="590639196855110" type="Browser">
-                    <param id="0" name="URL">Txt_URL.URL</param>
-                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="544122434375122">
-            <conditions>
-                <condition id="3" name="On touched object" sid="699811636317755" type="Touch">
-                    <param id="0" name="Object">Hud_Menu</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="262199647753370" type="System">
-                    <param id="0" name="Layout">Menu</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>SOUNDS</comment>
-        <event-block sid="294739853907016">
-            <conditions>
-                <condition id="3" name="On touched object" sid="569146251316531" type="Touch">
-                    <param id="0" name="Object">Hud_Audio</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="673070289499132" type="Hud_Audio">
-                    <param id="0" name="Frame number">(Self.AnimationFrame + 1)%2</param>
-                </action>
-            </actions>
-        </event-block>
+        <include>evGlobal</include>
+        <event-group description="" sid="925829724183918" title="Start Credits">
+            <sub-events>
+                <event-block sid="321071824575021">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="489399502481789" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="134551838393399" type="txDevelop">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;develop&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="382923893595535" type="txEngine">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;engine&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="856960957856006" type="txDesign">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;design&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="456318844915113" type="txGraphics">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;graphics&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="528173928677003" type="txSounds">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;sounds&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="269258550607214">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="672816666518763" type="Touch">
+                            <param id="0" name="Object">txURL</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Open URL in new window" sid="590639196855110" type="Browser">
+                            <param id="0" name="URL">txURL.URL</param>
+                            <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
