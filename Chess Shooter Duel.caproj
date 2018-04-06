@@ -116,7 +116,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="huDisplay" sid="978350863675604">
+        <object-type name="huTurns" sid="978350863675604">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="7" loop="0" name="por" pingpong="0" repeatcount="1" repeatto="0" sid="590821539720041" speed="0">
@@ -166,7 +166,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="huTurns" sid="393076385839921">
+        <object-type name="huDisplay" sid="393076385839921">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Sine" sid="319667767096997">

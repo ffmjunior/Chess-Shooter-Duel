@@ -39,9 +39,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/spGrid/" />
         <folder expanded="1" path="animation-folder/spPlayers/" />
-        <folder expanded="1" path="animation-folder/huDisplay/" />
-        <folder expanded="1" path="animation-folder/spGridMove/" />
         <folder expanded="1" path="animation-folder/huTurns/" />
+        <folder expanded="1" path="animation-folder/spGridMove/" />
+        <folder expanded="1" path="animation-folder/huDisplay/" />
         <folder expanded="1" path="animation-folder/huPlayer1/" />
         <folder expanded="1" path="animation-folder/buAudio/" />
         <folder expanded="1" path="animation-folder/buCredits/" />
