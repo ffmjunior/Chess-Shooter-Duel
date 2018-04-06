@@ -4,8 +4,8 @@
     <sid>286401997653238</sid>
     <event-sheet>evCredits</event-sheet>
     <size>
-        <width>960</width>
-        <height>640</height>
+        <width>1280</width>
+        <height>720</height>
     </size>
     <margins>
         <horizontal>100</horizontal>
@@ -37,8 +37,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
-                        <y>320</y>
+                        <x>64</x>
+                        <y>64</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -57,8 +57,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>864</x>
-                        <y>192</y>
+                        <x>64</x>
+                        <y>544</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -77,8 +77,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>32</x>
-                        <y>448</y>
+                        <x>64</x>
+                        <y>256</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -97,48 +97,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>864</x>
+                        <x>1184</x>
                         <y>448</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="bgTileground" uid="87">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>864</x>
-                        <y>544</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="bgTileground" uid="102">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>32</x>
-                        <y>544</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -157,8 +117,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>864</x>
-                        <y>320</y>
+                        <x>1184</x>
+                        <y>256</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -169,53 +129,11 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="txTitle" uid="88">
-                    <properties>
-                        <text>CS Duel CREDITS</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-37,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Sine2">
-                            <properties>
-                                <active-on-start>Yes</active-on-start>
-                                <movement>Angle</movement>
-                                <wave>Sine</wave>
-                                <period>4</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>5</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>512</x>
-                        <y>96</y>
-                        <z>0</z>
-                        <width>320</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="txSounds" uid="93">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-24,400,0</font>
+                        <font>Black Ops One,-29,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -226,8 +144,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>798</x>
-                        <y>433</y>
+                        <x>1120</x>
+                        <y>480</y>
                         <z>0</z>
                         <width>256</width>
                         <height>64</height>
@@ -242,7 +160,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-24,400,0</font>
+                        <font>Black Ops One,-29,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -253,8 +171,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>800</x>
-                        <y>305</y>
+                        <x>1120</x>
+                        <y>288</y>
                         <z>0</z>
                         <width>256</width>
                         <height>64</height>
@@ -269,7 +187,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-24,400,0</font>
+                        <font>Black Ops One,-29,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -280,8 +198,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>434</y>
+                        <x>192</x>
+                        <y>288</y>
                         <z>0</z>
                         <width>256</width>
                         <height>64</height>
@@ -296,9 +214,9 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-24,400,0</font>
+                        <font>Black Ops One,-29,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
@@ -307,8 +225,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>800</x>
-                        <y>178</y>
+                        <x>192</x>
+                        <y>576</y>
                         <z>0</z>
                         <width>256</width>
                         <height>64</height>
@@ -332,13 +250,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>182</x>
-                        <y>320</y>
+                        <x>64</x>
+                        <y>114</y>
                         <z>0</z>
-                        <width>232.884063721</width>
-                        <height>123.1170578</height>
+                        <width>357.546661377</width>
+                        <height>189.021484375</height>
                         <depth>0</depth>
-                        <hotspotX>0.501061559</hotspotX>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>0.502008021</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -348,7 +266,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-24,400,0</font>
+                        <font>Black Ops One,-29,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -359,8 +277,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>306</y>
+                        <x>192</x>
+                        <y>96</y>
                         <z>0</z>
                         <width>256</width>
                         <height>64</height>
@@ -368,270 +286,6 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="huPlayer1" uid="239">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <frame>0</frame>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>50</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>64</x>
-                        <y>64</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.512820542</hotspotX>
-                        <hotspotY>0.511627913</hotspotY>
-                        <angle>1.570796371</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="huPlayer1" uid="240">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>2</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <frame>0</frame>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>50</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>256</x>
-                        <y>160</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.512820542</hotspotX>
-                        <hotspotY>0.511627913</hotspotY>
-                        <angle>-1.57079649</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="huPlayer1" uid="241">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>4</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <frame>0</frame>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>50</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>128</x>
-                        <y>64</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.512820542</hotspotX>
-                        <hotspotY>0.511627913</hotspotY>
-                        <angle>1.570796371</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="huPlayer1" uid="242">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>6</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <frame>0</frame>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>50</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>64</x>
-                        <y>160</y>
-                        <z>0</z>
-                        <width>37.096946716</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.511627913</hotspotY>
-                        <angle>-1.57079649</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="huPlayer2" uid="243">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>1</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <frame>0</frame>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>50</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>256</x>
-                        <y>64</y>
-                        <z>0</z>
-                        <width>31.999702454</width>
-                        <height>31.999778748</height>
-                        <depth>0</depth>
-                        <hotspotX>0.512820542</hotspotX>
-                        <hotspotY>0.511627913</hotspotY>
-                        <angle>1.570796371</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="huPlayer2" uid="244">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>3</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <frame>0</frame>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>50</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>128</x>
-                        <y>160</y>
-                        <z>0</z>
-                        <width>31.999702454</width>
-                        <height>31.999778748</height>
-                        <depth>0</depth>
-                        <hotspotX>0.512820542</hotspotX>
-                        <hotspotY>0.511627913</hotspotY>
-                        <angle>-1.57079649</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="huPlayer2" uid="245">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>5</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <frame>0</frame>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>50</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>192</x>
-                        <y>64</y>
-                        <z>0</z>
-                        <width>37.096626282</width>
-                        <height>31.999778748</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.511627913</hotspotY>
-                        <angle>1.570796371</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="huPlayer2" uid="246">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>7</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <frame>0</frame>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Rotate">
-                            <properties>
-                                <speed>50</speed>
-                                <acceleration>0</acceleration>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>192</x>
-                        <y>160</y>
-                        <z>0</z>
-                        <width>35.397651672</width>
-                        <height>31.999778748</height>
-                        <depth>0</depth>
-                        <hotspotX>0.51219511</hotspotX>
-                        <hotspotY>0.511627913</hotspotY>
-                        <angle>-1.57079649</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -654,28 +308,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="buExit" uid="76">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>896</x>
-                        <y>64</y>
-                        <z>0</z>
-                        <width>48</width>
-                        <height>48</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="buBack" uid="78">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -686,11 +318,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>800</x>
-                        <y>64</y>
+                        <x>1184</x>
+                        <y>96</y>
                         <z>0</z>
-                        <width>48</width>
-                        <height>48</height>
+                        <width>80</width>
+                        <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -702,37 +334,7 @@
                     <properties>
                         <text>Construct 2</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-40,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Right</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <url></url>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>896</x>
-                        <y>224</y>
-                        <z>0</z>
-                        <width>288</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>1</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="txURL" uid="96">
-                    <properties>
-                        <text>Francisco &quot;CHICO&quot;</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-40,400,0</font>
+                        <font>Black Ops One,-60,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -747,10 +349,40 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>64</x>
-                        <y>480</y>
+                        <y>640</y>
                         <z>0</z>
-                        <width>448</width>
-                        <height>64</height>
+                        <width>416</width>
+                        <height>96</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="txURL" uid="96">
+                    <properties>
+                        <text>Francisco CHICO</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Black Ops One,-60,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <url></url>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>64</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>576</width>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -762,7 +394,7 @@
                     <properties>
                         <text>Kenny Assets</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-40,400,0</font>
+                        <font>Black Ops One,-60,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -776,11 +408,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>896</x>
+                        <x>1248</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>320</width>
-                        <height>64</height>
+                        <width>448</width>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>1</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -792,7 +424,7 @@
                     <properties>
                         <text>Sound Bible</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-40,400,0</font>
+                        <font>Black Ops One,-60,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -806,11 +438,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>896</x>
-                        <y>576</y>
+                        <x>1248</x>
+                        <y>640</y>
                         <z>0</z>
-                        <width>288</width>
-                        <height>64</height>
+                        <width>416</width>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>1</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -822,7 +454,7 @@
                     <properties>
                         <text>Kenny Assets</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-40,400,0</font>
+                        <font>Black Ops One,-60,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -836,11 +468,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>896</x>
-                        <y>480</y>
+                        <x>1248</x>
+                        <y>544</y>
                         <z>0</z>
-                        <width>320</width>
-                        <height>64</height>
+                        <width>448</width>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>1</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -850,9 +482,9 @@
                 </instance>
                 <instance type="txURL" uid="100">
                     <properties>
-                        <text>Pedro &quot;GANTZ&quot;</text>
+                        <text>Pedro GANTZ</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Black Ops One,-40,400,0</font>
+                        <font>Black Ops One,-60,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -867,10 +499,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>64</x>
-                        <y>576</y>
+                        <y>448</y>
                         <z>0</z>
-                        <width>352</width>
-                        <height>64</height>
+                        <width>448</width>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>

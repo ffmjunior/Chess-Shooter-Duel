@@ -2,7 +2,7 @@
 <c2project>
     <name>Chess Shooter Duel</name>
     <description>Chess shooter duel boardgame</description>
-    <version>2018.04.02.23.09</version>
+    <version>2018.04.06.04.26</version>
     <author>Gray Side Games</author>
     <author-email>contato@grayside.net</author-email>
     <author-website>http://graysite.net</author-website>
@@ -22,6 +22,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
+        <plugin author="Scirra" id="admob" version="1">Admob Ads</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -36,8 +37,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>960</width>
-        <height>640</height>
+        <width>1280</width>
+        <height>720</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -87,10 +88,30 @@
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="896412252522808" speed="0">
                     <frame duration="1" hotspotX="0.510204" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer1-2.png">
-                        <image-point name="Shoot" x="1.02041" y="0.72093" />
+                        <image-point name="Shoot" x="1.08163" y="0.72093" />
+                        <collision-poly>
+                            <point x="0.137755" y="0.0174419" />
+                            <point x="0.433674" y="0.0465116" />
+                            <point x="0.591837" y="0.465116" />
+                            <point x="0.591837" y="0.488372" />
+                            <point x="0.739796" y="0.854651" />
+                            <point x="0.489796" y="0.976744" />
+                            <point x="0.153061" y="0.976744" />
+                            <point x="0.0408163" y="0.488372" />
+                        </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.510204" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer2-2.png">
-                        <image-point name="Shoot" x="1.02041" y="0.72093" />
+                        <image-point name="Shoot" x="1.08163" y="0.72093" />
+                        <collision-poly>
+                            <point x="0.168367" y="0.0116279" />
+                            <point x="0.433674" y="0.0290698" />
+                            <point x="0.591837" y="0.465116" />
+                            <point x="0.591837" y="0.488372" />
+                            <point x="0.714286" y="0.877907" />
+                            <point x="0.489796" y="0.976744" />
+                            <point x="0.163265" y="0.959302" />
+                            <point x="0.0408163" y="0.488372" />
+                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
@@ -98,23 +119,32 @@
         <object-type name="huDisplay" sid="978350863675604">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="4" loop="0" name="por" pingpong="0" repeatcount="1" repeatto="0" sid="590821539720041" speed="0">
+                <animation framecount="7" loop="0" name="por" pingpong="0" repeatcount="1" repeatto="0" sid="590821539720041" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\tileset Display.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.518519" />
-                    <frame duration="1" hotspotX="0.50303" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.518519" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txResolução.png" />
+                    <frame duration="1" hotspotX="0.502146" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txJogador1venceu.png" />
+                    <frame duration="1" hotspotX="0.50211" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txJogador2venceu.png" />
+                    <frame duration="1" hotspotX="0.501887" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txComputadorvenceu.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txEmpate.png" />
                 </animation>
-                <animation framecount="4" loop="0" name="esp" pingpong="0" repeatcount="1" repeatto="0" sid="994904463058685" speed="0">
+                <animation framecount="7" loop="0" name="esp" pingpong="0" repeatcount="1" repeatto="0" sid="994904463058685" speed="0">
                     <frame duration="1" hotspotX="0.503817" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\tileset Display.png" />
                     <frame duration="1" hotspotX="0.503704" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.503448" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.503448" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.503448" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txResolución.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txJugador1venció.png" />
+                    <frame duration="1" hotspotX="0.502183" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txJugador2venció.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txOrdenadorvenció.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txEmpate.png" />
                 </animation>
-                <animation framecount="4" loop="0" name="eng" pingpong="0" repeatcount="1" repeatto="0" sid="152449331926911" speed="0">
+                <animation framecount="7" loop="0" name="eng" pingpong="0" repeatcount="1" repeatto="0" sid="152449331926911" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\tileset Display.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.503759" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txResolution.png" />
+                    <frame duration="1" hotspotX="0.502857" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txPlayer1wins.png" />
+                    <frame duration="1" hotspotX="0.502793" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txPlayer2wins.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txComputerwins.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\txTie.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -144,37 +174,25 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="9" loop="0" name="por" pingpong="0" repeatcount="1" repeatto="0" sid="862446844210172" speed="0">
+                <animation framecount="5" loop="0" name="por" pingpong="0" repeatcount="1" repeatto="0" sid="862446844210172" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txJogador1.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txJogador2.png" />
                     <frame duration="1" hotspotX="0.50303" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txComputador.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.518519" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txResolução.png" />
-                    <frame duration="1" hotspotX="0.502146" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txJogador1venceu.png" />
-                    <frame duration="1" hotspotX="0.50211" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txJogador2venceu.png" />
-                    <frame duration="1" hotspotX="0.501887" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txComputadorvenceu.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txEmpate.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txRepetir.png" />
                 </animation>
-                <animation framecount="9" loop="0" name="esp" pingpong="0" repeatcount="1" repeatto="0" sid="789714579804408" speed="0">
+                <animation framecount="5" loop="0" name="esp" pingpong="0" repeatcount="1" repeatto="0" sid="789714579804408" speed="0">
                     <frame duration="1" hotspotX="0.503817" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txJugador1.png" />
                     <frame duration="1" hotspotX="0.503704" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txJugador2.png" />
                     <frame duration="1" hotspotX="0.503448" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txOrdenador.png" />
                     <frame duration="1" hotspotX="0.503448" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txResolución.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txJugador1venció.png" />
-                    <frame duration="1" hotspotX="0.502183" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txJugador2venció.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txOrdenadorvenció.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txEmpate.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txRepetición.png" />
                 </animation>
-                <animation framecount="9" loop="0" name="eng" pingpong="0" repeatcount="1" repeatto="0" sid="553141717155534" speed="0">
+                <animation framecount="5" loop="0" name="eng" pingpong="0" repeatcount="1" repeatto="0" sid="553141717155534" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txPlayer1.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txPlayer2.png" />
                     <frame duration="1" hotspotX="0.503759" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txComputer.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txResolution.png" />
-                    <frame duration="1" hotspotX="0.502857" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txPlayer1wins.png" />
-                    <frame duration="1" hotspotX="0.502793" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txPlayer2wins.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txComputerwins.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txTie.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\txRematch.png" />
                 </animation>
             </animation-folder>
@@ -185,15 +203,7 @@
         <object-type name="Touch" sid="814624875200130">
             <plugin id="Touch" />
         </object-type>
-        <object-type name="txTitle" sid="612046581951295">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Sine2" sid="556429755240697">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="txPlay1" sid="755408124334720">
+        <object-type name="txStart" sid="755408124334720">
             <plugin id="Text" />
             <behaviors>
                 <behavior-type name="Sine" sid="935867817519398">
@@ -306,7 +316,14 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534151921102498" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Game Design\Projeto CHESS SHOOTER\Assets\txt_moveBishop.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Game Design\Projeto CHESS SHOOTER\Assets\txt_moveBishop.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Game Design\Projeto CHESS SHOOTER\Assets\txt_moveHorse.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Game Design\Projeto CHESS SHOOTER\Assets\txt_moveQueen.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Game Design\Projeto CHESS SHOOTER\Assets\txt_moveTower.png" />
@@ -457,41 +474,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="huPlayer2" sid="617535538607972">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="frame" sid="971227521107012" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Rotate" sid="506840671215056">
-                    <behavior id="Rotate" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="337989915755418" speed="0">
-                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer1-4.png" />
-                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer2-4.png" />
-                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer3-4.png" />
-                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer4-4.png" />
-                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer5-4.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer6-4.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer7-4.png" />
-                    <frame duration="1" hotspotX="0.512195" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer8-4.png" />
-                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer9-4.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="txPlay2" sid="217464207378789">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Sine" sid="721521870761644">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="txSubtitle" sid="953689794366225">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="buBack" sid="113427423226848">
             <plugin id="Sprite" />
             <animation-folder>
@@ -543,18 +525,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313595428552939" speed="5">
-                    <frame duration="1" hotspotX="0.500761" hotspotY="0.500761" original-source="D:\Gray Side\Assets Gray Side\Assets\spLight.png">
-                        <collision-poly>
-                            <point x="0.30898" y="0.30898" />
-                            <point x="0.499239" y="0.22831" />
-                            <point x="0.69102" y="0.30898" />
-                            <point x="0.771689" y="0.499239" />
-                            <point x="0.69102" y="0.69102" />
-                            <point x="0.499239" y="0.771689" />
-                            <point x="0.30898" y="0.69102" />
-                            <point x="0.22831" y="0.499239" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -574,13 +545,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="txMove" sid="638510251387355">
+        <object-type name="txBishop" sid="638510251387355">
             <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Sine2" sid="769216760676163">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
         </object-type>
         <object-type name="buPause" sid="546837278715984">
             <plugin id="Sprite" />
@@ -591,14 +557,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="spDisplay" sid="971676996143331">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="695618909257424" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="spLogo" sid="428193459017301">
             <plugin id="Sprite" />
             <instance-variables>
@@ -606,7 +564,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="125602104681312" speed="5">
-                    <frame duration="1" hotspotX="0.501062" hotspotY="0.502008" original-source="D:\Gray Side Games\Gray Side Games logo.png">
+                    <frame duration="1" hotspotX="0" hotspotY="0.502008" original-source="D:\Gray Side Games\Gray Side Games logo.png">
                         <collision-poly>
                             <point x="0.403397" y="0.630522" />
                             <point x="0.501062" y="0.289157" />
@@ -621,84 +579,130 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="bgHud" sid="228339473620065">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="589001964411777" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="spCameraPan" sid="587705445710751">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="ScrollTo" sid="298678288315124">
-                    <behavior id="scrollto" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="792484602579744" speed="5">
-                    <frame duration="1" hotspotX="0.500761" hotspotY="0.500761" original-source="D:\Gray Side\Assets Gray Side\Assets\spLight.png">
-                        <collision-poly>
-                            <point x="0.30898" y="0.30898" />
-                            <point x="0.499239" y="0.22831" />
-                            <point x="0.69102" y="0.30898" />
-                            <point x="0.771689" y="0.499239" />
-                            <point x="0.69102" y="0.69102" />
-                            <point x="0.499239" y="0.771689" />
-                            <point x="0.30898" y="0.69102" />
-                            <point x="0.22831" y="0.499239" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="txBanner" sid="250122546365490">
             <plugin id="Text" />
         </object-type>
         <object-type name="bgScenario" sid="342201741766959">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811439542874258" speed="0">
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811439542874258" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.500867" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgBar.png" />
-                    <frame duration="1" hotspotX="0.500463" hotspotY="0.500867" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgPark.png" />
-                    <frame duration="1" hotspotX="0.500463" hotspotY="0.500867" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgTrain.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500867" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgBoard.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500867" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgBridge.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500867" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgClinic.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500867" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgDesert.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgForest.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500867" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgPark.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500867" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgTrain.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="CSSImport" sid="584098594270569">
+        <object-type name="AdmobAds" sid="181943401787812">
+            <plugin id="admob" />
+        </object-type>
+        <object-type global="1" name="CSSImport" sid="186187693936453">
             <plugin id="CSS_import" />
+        </object-type>
+        <object-type name="buConfig" sid="591201459356516">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="770596435293292" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\btConfig.png">
+                        <collision-poly>
+                            <point x="0.0208333" y="0.0208333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.979167" y="0.0208333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.979167" y="0.979167" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0208333" y="0.979167" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="338899872716231">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273786535718671" speed="5">
+                    <frame duration="1" hotspotX="0.492754" hotspotY="0.568323" original-source="D:\Gray Side\Assets Gray Side\cs_splash.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spTitle" sid="529661635476584">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="389619618455752" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="D:\Gray Side\Assets Gray Side\csd_logo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txHorse" sid="343938254843472">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txTower" sid="321431716770865">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txQueen" sid="308061546293853">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="huPlayer2" sid="798818661090285">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="frame" sid="405612990985902" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Rotate" sid="187754554920329">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="733473674050806" speed="0">
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer1-4.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer2-4.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer3-4.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer4-4.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer5-4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer6-4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer7-4.png" />
+                    <frame duration="1" hotspotX="0.512195" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer8-4.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="0.511628" original-source="D:\Gray Side Games\Projetos GAME DESIGN\CS Duel\Assets\spPlayer9-4.png" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
-        <family name="tx" plugin-id="Text" sid="444007617900596">
+        <family name="tx" plugin-id="Text" sid="497129183118736">
             <members>
                 <member>txBanner</member>
+                <member>txBishop</member>
                 <member>txDesign</member>
                 <member>txDevelop</member>
                 <member>txEngine</member>
                 <member>txGraphics</member>
-                <member>txMove</member>
-                <member>txPlay1</member>
-                <member>txPlay2</member>
+                <member>txHorse</member>
+                <member>txQueen</member>
                 <member>txSounds</member>
-                <member>txSubtitle</member>
-                <member>txTitle</member>
+                <member>txStart</member>
+                <member>txTower</member>
                 <member>txURL</member>
             </members>
         </family>
     </families>
     <layout-folder>
         <layout>Menu.xml</layout>
+        <layout>Config.xml</layout>
         <layout>Game.xml</layout>
         <layout>Credits.xml</layout>
         <layout>Levels.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>evGame.xml</event-sheet>
-        <event-sheet>evMenu.xml</event-sheet>
+        <event-sheet>evConfig.xml</event-sheet>
         <event-sheet>evCredits.xml</event-sheet>
         <event-sheet>evGlobal.xml</event-sheet>
+        <event-sheet>evMenu.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Function" uid="71" />
@@ -725,6 +729,21 @@
         <global-instance type="LocalStorage" uid="234" />
         <global-instance type="Keyboard" uid="236" />
         <global-instance type="AJAX" uid="237" />
+        <global-instance type="AdmobAds" uid="94">
+            <properties>
+                <overlap>Yes</overlap>
+                <test-mode>True</test-mode>
+                <android></android>
+                <banner-id-android></banner-id-android>
+                <interstitial-id-android></interstitial-id-android>
+                <ios></ios>
+                <banner-id-ios></banner-id-ios>
+                <interstitial-id-ios></interstitial-id-ios>
+                <windows-phone></windows-phone>
+                <banner-id-wp8></banner-id-wp8>
+                <interstitial-id-wp8></interstitial-id-wp8>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder>
         <file name="Shot9mm.m4a" />
@@ -753,17 +772,9 @@
             <file name="icon-128.png" />
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
-            <file name="black_ops_one_regular-webfont.woff" />
-            <file name="black_ops_one_regular-webfont.woff2" />
-            <file name="stylesheet.css" />
         </file-folder>
         <file name="strings.eng.xml" />
         <file name="strings.esp.xml" />
         <file name="strings.por.xml" />
-        <file name="csduel.css" />
-        <file name="fonts.css" />
-        <file name="Black Ops One Regular.ttf" />
-        <file name="black_ops_one_regular-webfont2.woff" />
-        <file name="black_ops_one_regular-webfont2.woff2" />
     </files-folder>
 </c2project>

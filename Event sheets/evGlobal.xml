@@ -3,17 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evGlobal</name>
     <events>
-        <event-block sid="533052948554540">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="660978658036561" type="System" />
-            </conditions>
-            <actions>
-                <action id="5" name="Set web font" sid="608308592453315" type="tx">
-                    <param id="0" name="Family name">&quot;black_ops_oneregular&quot;</param>
-                    <param id="1" name="CSS URL">&quot;fonts.css&quot;</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="934684349662501">
             <conditions>
                 <condition id="3" name="On touched object" sid="366334247242474" type="Touch">
@@ -100,7 +89,7 @@
                             <param id="0" name="Audio file">BgMusic1</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Music1&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;Music&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -119,7 +108,7 @@
                             <param id="0" name="Audio file">BgMusic2</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Music2&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;Music&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -138,7 +127,7 @@
                             <param id="0" name="Audio file">BgMusic3</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Music3&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;Music&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -151,7 +140,7 @@
                     </conditions>
                     <actions>
                         <action id="6" name="Stop" sid="308717453279376" type="Audio">
-                            <param id="0" name="Tag">&quot;Music1&quot; &amp; &quot;Music2&quot; &amp; &quot;Music3&quot;</param>
+                            <param id="0" name="Tag">&quot;Music&quot;</param>
                         </action>
                     </actions>
                 </event-block>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
-	<string id='subtitle'>Mova, Atire e Vença!</string>
-	<string id='play1'>Jogador vs CPU</string>
-	<string id='play2'>Jogador vs Jogador</string>
-	<string id='move'>Movimentos</string>
+	<string id='start'>COMEÇAR</string>
+	<string id='bishop'>Bispo</string>
+	<string id='horse'>Cavalo</string>
+	<string id='queen'>Rainha</string>
+	<string id='tower'>Torre</string>
 	<string id='staff'>Créditos</string>
 	<string id='develop'>Desenvolvido por</string>
 	<string id='design'>Projetado por</string>

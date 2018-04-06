@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evGame</name>
     <events>
-        <include>evMenu</include>
+        <include>evConfig</include>
         <include>evGlobal</include>
         <variable constant="0" name="ClickedMove" sid="839666042721959" static="0" type="number">0</variable>
         <variable constant="0" name="Computer" sid="782358536376054" static="0" type="number">-1</variable>
@@ -11,6 +11,8 @@
         <variable constant="0" name="MovedPlayers" sid="769281071437218" static="0" type="number">0</variable>
         <variable constant="0" name="MovesThreshold" sid="723059826476129" static="0" type="number">2</variable>
         <variable constant="0" name="PlayerTurn" sid="867510067874291" static="0" type="number">0</variable>
+        <variable comment="Used by IA" constant="0" name="Player_X" sid="107362187202564" static="0" type="number">0</variable>
+        <variable comment="Used by IA" constant="0" name="Player_Y" sid="500441133362038" static="0" type="number">0</variable>
         <variable constant="0" name="Winner" sid="741122833161438" static="0" type="number">-1</variable>
         <event-group description="" sid="272498897240374" title="Functions">
             <sub-events>
@@ -21,8 +23,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="131448591929918" type="txMove">
-                            <param id="0" name="Visibility">0</param>
+                        <action id="-15" name="Set visible" sid="730805988925404" type="txBishop">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="153933695293041" type="txHorse">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="252763836753800" type="txQueen">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="977045693037284" type="txTower">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="714714517767889" type="buMoves">
                             <param id="0" name="Visibility">0</param>
@@ -48,11 +59,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="490462186715126" type="spPlayers">
-                                    <param id="0" name="Object">spCamera</param>
-                                    <param id="1" name="Layer">&quot;Dim&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
                                 <action id="0" name="Call function" sid="575414868475456" type="Function">
                                     <param id="0" name="Name">&quot;BishopMove&quot;</param>
                                     <param id="1" name="Parameter {n}">spGrid.gX{###}spGrid.gY{###}-MovesThreshold{###}MovesThreshold</param>
@@ -79,11 +85,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="212902089988448" type="spPlayers">
-                                    <param id="0" name="Object">spCamera</param>
-                                    <param id="1" name="Layer">&quot;Dim&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
                                 <action id="0" name="Call function" sid="933391002810049" type="Function">
                                     <param id="0" name="Name">&quot;HorseMove&quot;</param>
                                     <param id="1" name="Parameter {n}">spGrid.gX{###}spGrid.gY</param>
@@ -110,11 +111,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="682209325040365" type="spPlayers">
-                                    <param id="0" name="Object">spCamera</param>
-                                    <param id="1" name="Layer">&quot;Dim&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
                                 <action id="0" name="Call function" sid="897450322217206" type="Function">
                                     <param id="0" name="Name">&quot;QueenMove&quot;</param>
                                     <param id="1" name="Parameter {n}">spGrid.gX{###}spGrid.gY{###}-MovesThreshold{###}MovesThreshold</param>
@@ -141,11 +137,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="494901144738545" type="spPlayers">
-                                    <param id="0" name="Object">spCamera</param>
-                                    <param id="1" name="Layer">&quot;Dim&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
                                 <action id="0" name="Call function" sid="291860424859356" type="Function">
                                     <param id="0" name="Name">&quot;TowerMove&quot;</param>
                                     <param id="1" name="Parameter {n}">spGrid.gX{###}spGrid.gY{###}-MovesThreshold{###}MovesThreshold</param>
@@ -724,7 +715,6 @@
                             <param id="0" name="Tag">&quot;SignalRotation&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="554354630696595" type="buCrossair" />
-                        <action id="-9" name="Destroy" sid="543340177760488" type="spCamera" />
                         <action id="0" name="Call function" sid="409258238936460" type="Function">
                             <param id="0" name="Name">&quot;NextPlayer&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -810,6 +800,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="5" name="Set frame" sid="569847639386707" type="huDisplay">
+                                    <param id="0" name="Frame number">3</param>
+                                </action>
                                 <action id="5" name="Set frame" sid="297099584107685" type="huTurns">
                                     <param id="0" name="Frame number">3</param>
                                 </action>
@@ -832,8 +825,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="916693130804755" type="huTurns">
-                                    <param id="0" name="Frame number">7</param>
+                                <action id="5" name="Set frame" sid="916693130804755" type="huDisplay">
+                                    <param id="0" name="Frame number">6</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="623793221058887" type="huTurns">
+                                    <param id="0" name="Frame number">4</param>
                                 </action>
                                 <action id="0" name="Play" sid="309848554188388" type="Audio">
                                     <param id="0" name="Audio file">Tie</param>
@@ -844,12 +840,6 @@
                                 <action id="-9" name="Set value" sid="167130145899322" type="System">
                                     <param id="0" name="Variable">Winner</param>
                                     <param id="1" name="Value">2</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="806071158929048" type="System">
-                                    <param id="0" name="Seconds">2.0</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="623793221058887" type="huTurns">
-                                    <param id="0" name="Frame number">8</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -871,8 +861,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="499981790763259" type="huTurns">
+                                <action id="5" name="Set frame" sid="499981790763259" type="huDisplay">
                                     <param id="0" name="Frame number">Winner + 4</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="281583873962867" type="huTurns">
+                                    <param id="0" name="Frame number">4</param>
                                 </action>
                                 <action id="7" name="Play (by name)" sid="756192231176052" type="Audio">
                                     <param id="0" name="Folder">0</param>
@@ -880,12 +873,6 @@
                                     <param id="3" name="Loop">0</param>
                                     <param id="4" name="Volume">0</param>
                                     <param id="2" name="Tag (optional)">&quot;Win&quot;</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="345195890073649" type="System">
-                                    <param id="0" name="Seconds">2.0</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="281583873962867" type="huTurns">
-                                    <param id="0" name="Frame number">8</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -928,14 +915,26 @@
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="869345210982712" type="bgScenario">
-                            <param id="0" name="Frame number">choose(0,1,2)</param>
+                            <param id="0" name="Frame number">choose(0,1,2,3,4,5,6,7)</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="160909655224630" type="bgScenario">
+                            <param id="0" name="Degrees">choose(0,180)</param>
                         </action>
                         <action id="-4" name="Set layer visible" sid="516384109754767" type="System">
                             <param id="0" name="Layer">&quot;Display&quot;</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="485942705543939" type="txMove">
-                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;move&quot;)</param>
+                        <action id="0" name="Set text" sid="880983473337075" type="txBishop">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;bishop&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="587998215383111" type="txHorse">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;horse&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="197108007855859" type="txQueen">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;queen&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="686564333350555" type="txTower">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;tower&quot;)</param>
                         </action>
                         <action id="7" name="Play (by name)" sid="351413795678693" type="Audio">
                             <param id="0" name="Folder">0</param>
@@ -943,6 +942,21 @@
                             <param id="3" name="Loop">0</param>
                             <param id="4" name="Volume">0</param>
                             <param id="2" name="Tag (optional)">&quot;Turn&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="150655344814559">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="457737681839494" type="System" />
+                        <condition id="3" name="Compare frame" sid="234751853529192" type="spPlayers">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">PlayerTurn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="242688344418679" type="spCamera">
+                            <param id="0" name="X">lerp(Self.X, spPlayers.X, 0.1)</param>
+                            <param id="1" name="Y">lerp(Self.Y, spPlayers.Y, 0.1)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1024,11 +1038,20 @@
                         <action id="-15" name="Set visible" sid="625422636164656" type="huDisplay">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="224890295014609" type="txMove">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
                         <action id="5" name="Set frame" sid="464622144574939" type="huDisplay">
                             <param id="0" name="Frame number">PlayerTurn</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="843307497419883" type="txBishop">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="395334414155785" type="txHorse">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="713009511179690" type="txQueen">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="434813196819331" type="txTower">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1048,7 +1071,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="981083735600523" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="981083735600523" type="System">
                                     <param id="0" name="Seconds">0.5</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="825411739160023" type="buMoves">
@@ -1078,7 +1101,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="738312770183486" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="738312770183486" type="System">
                                     <param id="0" name="Seconds">0.5</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="573558781563240" type="buMoves">
@@ -1106,7 +1129,7 @@
                             <conditions>
                                 <condition id="3" name="Compare frame" sid="750173697159524" type="huTurns">
                                     <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Number">8</param>
+                                    <param id="1" name="Number">4</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1184,6 +1207,14 @@
                             <param id="0" name="Pin to">spPlayers</param>
                             <param id="1" name="Mode">2</param>
                         </action>
+                        <action id="-9" name="Set value" sid="567368565493028" type="System">
+                            <param id="0" name="Variable">Player_X</param>
+                            <param id="1" name="Value">spGridMove.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="675938634679971" type="System">
+                            <param id="0" name="Variable">Player_Y</param>
+                            <param id="1" name="Value">spGridMove.Y</param>
+                        </action>
                         <action id="0" name="Call function" sid="946291378941695" type="Function">
                             <param id="0" name="Name">&quot;DestroyGridMove&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -1243,7 +1274,16 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="682672110948586" type="txMove">
+                        <action id="-15" name="Set visible" sid="818041665234035" type="txBishop">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="287408097121718" type="txHorse">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="953724675475302" type="txQueen">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="339607306853947" type="txTower">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="542124598036067" type="buMoves">
@@ -1252,9 +1292,6 @@
                         <action id="0" name="Call function" sid="859842386188469" type="Function">
                             <param id="0" name="Name">&quot;DestroyGridMove&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="719584245439497" type="spCameraPan">
-                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-1" name="Set X" sid="905114400699999" type="spPlayers">
                             <param id="0" name="X">Self.X + (Self.NextX - Self.CurX) * dt</param>
@@ -1299,6 +1336,24 @@
                                     <param id="0" name="Instance variable">moved</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="978285657021669">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="485109504003783" type="System">
+                                    <param id="0" name="Object">spPlayers</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="255000354246166" type="spPlayers">
+                                    <param id="0" name="Instance variable">moved</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="553988714719195" type="System">
+                                    <param id="0" name="First value">spPlayers.PickedCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="138559971450133" type="System" />
+                            </conditions>
+                            <actions>
                                 <action id="0" name="Spawn another object" sid="289210246495172" type="spPlayers">
                                     <param id="0" name="Object">spBullet</param>
                                     <param id="1" name="Layer">&quot;Grid&quot;</param>
@@ -1331,15 +1386,15 @@
                                 <condition id="-19" name="Pick all" sid="567044619265653" type="System">
                                     <param id="0" name="Object">spPlayers</param>
                                 </condition>
-                                <condition id="-8" name="Compare two values" sid="553988714719195" type="System">
+                                <condition id="-8" name="Is boolean instance variable set" sid="198977471814810" type="spPlayers">
+                                    <param id="0" name="Instance variable">moved</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="957043221478435" type="System">
                                     <param id="0" name="First value">spPlayers.PickedCount</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">2</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="138559971450133" type="System" />
-                                <condition id="-8" name="Is boolean instance variable set" sid="198977471814810" type="spPlayers">
-                                    <param id="0" name="Instance variable">moved</param>
-                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="698512128271350" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-16" name="Wait" sid="597761303855376" type="System">
@@ -1352,9 +1407,6 @@
                                 <action id="-9" name="Set value" sid="754289560470254" type="System">
                                     <param id="0" name="Variable">PlayerTurn</param>
                                     <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="518080794122300" type="spCameraPan">
-                                    <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="0" name="Call function" sid="563263845506633" type="Function">
                                     <param id="0" name="Name">&quot;DisplayTurn&quot;</param>
@@ -1388,7 +1440,7 @@
                             <param id="0" name="Degrees">int(random(360))</param>
                         </action>
                         <action id="5" name="Set frame" sid="119687950283957" type="spBlood">
-                            <param id="0" name="Frame number">choose(0,1)</param>
+                            <param id="0" name="Frame number">random(choose(0,1))</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1436,7 +1488,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="641207042203338" type="Function">
+                        <action id="0" name="Call function" sid="392982240405515" type="Function">
+                            <param id="0" name="Name">&quot;QueenMove&quot;</param>
+                            <param id="1" name="Parameter {n}">spGrid.gX{###}spGrid.gY{###}-MovesThreshold{###}MovesThreshold</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="641207042203338" type="Function">
                             <param id="0" name="Name">&quot;HorseMove&quot;</param>
                             <param id="1" name="Parameter {n}">spGrid.gX{###}spGrid.gY</param>
                         </action>
@@ -1446,45 +1502,48 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="783366694147700">
+                        <event-block sid="482889119009140">
                             <conditions>
-                                <condition id="3" name="Compare frame" sid="874983924294912" type="spPlayers">
+                                <condition id="3" name="Compare frame" sid="927245274245173" type="spPlayers">
                                     <param id="0" name="Comparison">0</param>
                                     <param id="1" name="Number">PlayerTurn</param>
                                 </condition>
-                                <condition id="-16" name="Pick random instance" sid="140495359342762" type="System">
+                                <condition id="-16" name="Pick random instance" sid="686298026563570" type="System">
                                     <param id="0" name="Object">spGridMove</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="995373153230556" type="spPlayers">
+                                <action id="-10" name="Set value" sid="390048612254828" type="spPlayers">
                                     <param id="0" name="Instance variable">curX</param>
                                     <param id="1" name="Value">Self.X</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="727401067867223" type="spPlayers">
+                                <action id="-10" name="Set value" sid="209086742949380" type="spPlayers">
                                     <param id="0" name="Instance variable">curY</param>
                                     <param id="1" name="Value">Self.Y</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="885920175969886" type="spPlayers">
+                                <action id="-10" name="Set value" sid="474248356460305" type="spPlayers">
                                     <param id="0" name="Instance variable">nextX</param>
                                     <param id="1" name="Value">spGridMove.X</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="878128301873551" type="spPlayers">
+                                <action id="-10" name="Set value" sid="115363710349608" type="spPlayers">
                                     <param id="0" name="Instance variable">nextY</param>
                                     <param id="1" name="Value">spGridMove.Y</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="875522080166571" type="spGridMove">
+                                <action id="-10" name="Set value" sid="269788761780633" type="spGridMove">
                                     <param id="0" name="Instance variable">touched</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="839732557901850" type="Function">
+                                <action disabled="1" id="-8" name="Set angle" sid="585327076262850" type="spPlayers">
+                                    <param id="0" name="Angle">angle(spPlayers.X, spPlayers.Y, Player_X, Player_Y)</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="237809322686705" type="spPlayers">
+                                    <param id="0" name="Angle">angle(spGridMove.X, spGridMove.Y, Player_X, Player_Y) + random(-10,10)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="760071290075511" type="Function">
                                     <param id="0" name="Name">&quot;DestroyGridMove&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-8" name="Set angle" sid="824330627148796" type="spPlayers">
-                                    <param id="0" name="Angle">random(360)</param>
-                                </action>
-                                <action id="0" name="Call function" sid="512776161313533" type="Function">
+                                <action id="0" name="Call function" sid="147976484468194" type="Function">
                                     <param id="0" name="Name">&quot;NextPlayer&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
