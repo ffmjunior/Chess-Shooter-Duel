@@ -3,15 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evMenu</name>
     <events>
-        <include>evConfig</include>
-        <include>evGlobal</include>
-        <event-group description="" sid="391241580002451" title="Start Menu2">
+        <event-group description="" sid="391241580002451" title="Start Menu">
             <sub-events>
                 <event-block sid="929344335789428">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="852476521625441" type="System" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="329764821550685" type="Function">
+                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="4" name="Preload" sid="338497214136834" type="Audio">
                             <param id="0" name="Audio file">BgMusic1</param>
                         </action>
@@ -44,44 +46,404 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="683816009149319">
+                <event-block sid="940275141018436">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="373313822309951" type="Touch">
-                            <param id="0" name="Object">txStart</param>
+                        <condition id="17" name="On tap object" sid="935353110384913" type="Touch">
+                            <param id="0" name="Object">txVs</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-21" name="Reset global variables" sid="123254222386230" type="System" />
-                        <action id="-2" name="Go to layout" sid="959618413600108" type="System">
+                        <action id="-2" name="Go to layout" sid="868372026285644" type="System">
                             <param id="0" name="Layout">Game</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="184559873853652">
+                <event-block sid="487063151544634">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="628931673050279" type="Touch">
-                            <param id="0" name="Object">buConfig</param>
+                        <condition id="17" name="On tap object" sid="243575874347137" type="Touch">
+                            <param id="0" name="Object">txSingle</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="869049961813534" type="System">
-                            <param id="0" name="Layout">Config</param>
+                        <action id="-9" name="Set value" sid="169096426592933" type="System">
+                            <param id="0" name="Variable">Computer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="324694918966015" type="System">
+                            <param id="0" name="Layout">Game</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="548206505057982" title="Language2">
+        <event-group description="" sid="200865197833565" title="Global Button">
             <sub-events>
-                <event-block sid="967698372774095">
+                <event-block sid="804816534525255">
                     <conditions>
-                        <condition id="0" name="On function" sid="945479070905736" type="Function">
-                            <param id="0" name="Name">&quot;ShowText&quot;</param>
+                        <condition id="3" name="On touched object" sid="123626065814910" type="Touch">
+                            <param id="0" name="Object">buExit</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="509661042891525" type="txStart">
-                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;start&quot;)</param>
+                        <action id="1" name="Close" sid="179611931943811" type="Browser" />
+                    </actions>
+                </event-block>
+                <event-block sid="452829347982119">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="897039346088055" type="Touch">
+                            <param id="0" name="Object">buConfig</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="287171212120553" type="System">
+                            <param id="0" name="Layout">Config</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="612416507106296">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="194726512353282" type="Touch">
+                            <param id="0" name="Object">buBack</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="445782494641773" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="567757817766560">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="721308745953084" type="Touch">
+                            <param id="0" name="Object">buAudio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="904736836778171" type="buAudio">
+                            <param id="0" name="Frame number">(Self.AnimationFrame + 1)%2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="750799205122423">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="289725158035391" type="buAudio">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set silent" sid="837844199883453" type="Audio">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="737317662741837">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="295502255835308" type="buAudio">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Set silent" sid="589537985512099" type="Audio">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="682205436081505">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="772143978896010" type="Touch">
+                            <param id="0" name="Object">buMusic</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="386355445624575" type="buMusic">
+                            <param id="0" name="Frame number">(Self.AnimationFrame + 1)%4</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="333096063236715">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="309386029464767" type="buMusic">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="181088834888670" type="Audio">
+                                    <param id="0" name="Audio file">BgMusic1</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Music1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="883303524147796">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="343771916810933" type="buMusic">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="298363861963901" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music1&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="433313952888936" type="Audio">
+                                    <param id="0" name="Audio file">BgMusic2</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Music2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="265685309071317">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="763214332879813" type="buMusic">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="911183796626685" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music2&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="858261075552998" type="Audio">
+                                    <param id="0" name="Audio file">BgMusic3</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Music3&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="422591560916891">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="267920883151633" type="buMusic">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="783155163026389" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music1&quot;</param>
+                                </action>
+                                <action id="6" name="Stop" sid="398940556704382" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music2&quot;</param>
+                                </action>
+                                <action id="6" name="Stop" sid="923687746824607" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music3&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="574172771368807" title="Global Language">
+            <sub-events>
+                <event-block sid="257507051670159">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="593252102450992" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="635152144870721" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="973169682225338" type="tx">
+                            <param id="0" name="Family name">&quot;black_ops_oneregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;font.css&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="893884536102810">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="212986387001134" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="330470642003891" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="236953312184990">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="628369457907753" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="156216702647990" type="System">
+                            <param id="0" name="Variable">Language</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="474499148252511" type="Function">
+                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="605442185619417">
+                    <conditions>
+                        <condition id="0" name="On function" sid="600813111596582" type="Function">
+                            <param id="0" name="Name">&quot;GetText&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="350370069072757" type="Function">
+                            <param id="0" name="Value">XML.StringValue(&quot;/strings/string[@id=&apos;&quot; &amp; Function.Param(0)&amp;&quot;&apos;]/text()&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="106129717518748">
+                    <conditions>
+                        <condition id="0" name="On function" sid="477989739498737" type="Function">
+                            <param id="0" name="Name">&quot;ChangeText&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="712949938972343" type="AJAX">
+                            <param id="0" name="Tag">&quot;Search&quot;</param>
+                            <param id="1" name="URL">&quot;strings.&quot;&amp; Language &amp; &quot;.xml&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="474249907557632">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="133983873136325" type="AJAX">
+                            <param id="0" name="Tag">&quot;Search&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="886291660417406" type="XML">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="225196471780890">
+                    <conditions>
+                        <condition id="0" name="On function" sid="840343464089076" type="Function">
+                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="915381430966208" type="icLanguage">
+                            <param id="0" name="Animation">icLanguage.lang</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="480175472215815" type="Function">
+                            <param id="0" name="Name">&quot;ChangeText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="644522653219789" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="500737752373773" type="Function">
+                            <param id="0" name="Name">&quot;SetTextConfig&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="350780428333859" type="Function">
+                            <param id="0" name="Name">&quot;SetTextMenu&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="979808476870292">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="455362398277551" type="icLanguage">
+                                    <param id="0" name="Instance variable">lang</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Language</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="822016990922769" type="buSelect">
+                                    <param id="0" name="X">icLanguage.X</param>
+                                    <param id="1" name="Y">icLanguage.Y</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="410310155096660" type="icLanguage">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="924543039866907">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="705119700045606" type="icLanguage">
+                                    <param id="0" name="Instance variable">lang</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">Language</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="364140778732272" type="icLanguage">
+                                    <param id="0" name="Opacity">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="680183124249050">
+                    <conditions>
+                        <condition id="0" name="On function" sid="429616097158010" type="Function">
+                            <param id="0" name="Name">&quot;SetTextMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set web font" sid="928655672771239" type="tx">
+                            <param id="0" name="Family name">&quot;black_ops_oneregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;font.css&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="845372971576677" type="txSingle">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;, &quot;single&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="683170073153419" type="txVs">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;, &quot;vs&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="434458565750730" title="Global Level">
+            <sub-events>
+                <event-block sid="751146658603788">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="840011124848296" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="194110277403859" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Level&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="109826969442290">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="470351265897161" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Level&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="581293646247147" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Level&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="651470351779856">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="979934642277772" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Level&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="210717399612562" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="123462239601466" type="Function">
+                            <param id="0" name="Name">&quot;LevelOpacity&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>

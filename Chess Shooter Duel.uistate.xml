@@ -10,15 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Menu</layout>
+        <layout active="1" order="0">Menu</layout>
         <layout order="2">Config</layout>
-        <layout active="1" order="4">Game</layout>
-        <layout order="6">Credits</layout>
+        <layout order="4">Game</layout>
         <event-sheet order="1">evMenu</event-sheet>
         <event-sheet order="3">evConfig</event-sheet>
         <event-sheet order="5">evGame</event-sheet>
-        <event-sheet order="7">evCredits</event-sheet>
-        <event-sheet order="8">evGlobal</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -27,7 +24,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="1" name="tx" />
+        <family expanded="0" name="tx" />
+        <family expanded="0" name="txMenu" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -61,7 +59,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/bgScenario/" />
         <folder expanded="1" path="animation-folder/buConfig/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
-        <folder expanded="1" path="animation-folder/spTitle/" />
         <folder expanded="1" path="animation-folder/huPlayer2/" />
+        <folder expanded="1" path="animation-folder/spTitle/" />
+        <folder expanded="1" path="animation-folder/bgMenu/" />
+        <folder expanded="1" path="animation-folder/border/" />
+        <folder expanded="1" path="animation-folder/spLogo2/" />
     </folders-expanded>
 </c2uistate>

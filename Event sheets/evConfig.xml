@@ -3,140 +3,70 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evConfig</name>
     <events>
-        <include>evGlobal</include>
+        <include>evMenu</include>
         <variable constant="0" name="Language" sid="549682877004386" static="0" type="text">por</variable>
-        <event-group description="" sid="872196790338099" title="Start Menu">
-            <sub-events>
-                <event-block sid="640289794641467">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="310302911404206" type="Touch">
-                            <param id="0" name="Object">buCredits</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="395143973771143" type="System">
-                            <param id="0" name="Layout">Credits</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="431249343465856">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="247668080587914" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set frame" sid="716258754822265" type="huPlayer1">
-                            <param id="0" name="Frame number">huPlayer1.frame</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="292187979507913" type="huPlayer2">
-                            <param id="0" name="Frame number">huPlayer2.frame</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="905501937521320">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="580916428184693" type="Touch">
-                            <param id="0" name="Object">huPlayer1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Add to" sid="569530277692883" type="huPlayer1">
-                            <param id="0" name="Instance variable">frame</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="146188526988086">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="666690359683697" type="huPlayer1">
-                                    <param id="0" name="Instance variable">frame</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">8</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Set frame" sid="898528876013049" type="huPlayer1">
-                                    <param id="0" name="Frame number">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="738636152363728" type="huPlayer1">
-                                    <param id="0" name="Instance variable">frame</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="659091762449071">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="290880442850304" type="Touch">
-                            <param id="0" name="Object">huPlayer2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Add to" sid="847047588846645" type="huPlayer2">
-                            <param id="0" name="Instance variable">frame</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="497085133574062">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="493676814138432" type="huPlayer2">
-                                    <param id="0" name="Instance variable">frame</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">8</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Set frame" sid="967377680745264" type="huPlayer2">
-                                    <param id="0" name="Frame number">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="781934973744840" type="huPlayer2">
-                                    <param id="0" name="Instance variable">frame</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="866744370159450" title="Language">
+        <event-group description="" sid="866744370159450" title="Start Config">
             <sub-events>
                 <event-block sid="935030361881251">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="305489329730471" type="System" />
                     </conditions>
                     <actions>
-                        <action id="5" name="Check item exists" sid="570035570998739" type="LocalStorage">
-                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        <action id="0" name="Call function" sid="197804168919491" type="Function">
+                            <param id="0" name="Name">&quot;SetTextConfig&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="373980445043403">
+                <event-block sid="182681323889471">
                     <conditions>
-                        <condition id="9" name="On item exists" sid="335627850712123" type="LocalStorage">
-                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        <condition id="-6" name="Every X seconds" sid="154095574373935" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="403405483797711">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="415858751806920" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">LEVELEASY</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Get item" sid="815536100370653" type="LocalStorage">
-                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        <action id="0" name="Call function" sid="732442832551929" type="Function">
+                            <param id="0" name="Name">LevelEasy</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="810930009991338">
+                <event-block sid="622221308137301">
                     <conditions>
-                        <condition id="1" name="On item get" sid="509656762077100" type="LocalStorage">
-                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                        <condition id="-14" name="Compare variable" sid="285734919940533" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">LEVELMEDIUM</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="151080676515769" type="System">
-                            <param id="0" name="Variable">Language</param>
-                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        <action id="0" name="Call function" sid="644418355252917" type="Function">
+                            <param id="0" name="Name">LevelMedium</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="794148252033129" type="Function">
-                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
+                    </actions>
+                </event-block>
+                <event-block sid="583009205485834">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="859718906367091" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">LEVELHARD</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="565238885086120" type="Function">
+                            <param id="0" name="Name">LevelHard</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -162,63 +92,205 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="234892542458773">
+                <event-block sid="922018967778251">
                     <conditions>
-                        <condition id="0" name="On function" sid="927090020933802" type="Function">
-                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
+                        <condition id="0" name="On function" sid="981849696045554" type="Function">
+                            <param id="0" name="Name">&quot;SetTextConfig&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="950470070606701" type="icLanguage">
-                            <param id="0" name="Animation">icLanguage.lang</param>
-                            <param id="1" name="From">1</param>
+                        <action id="5" name="Set web font" sid="913657527711200" type="tx">
+                            <param id="0" name="Family name">&quot;black_ops_oneregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;font.css&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="609999937184494" type="Function">
-                            <param id="0" name="Name">&quot;ChangeText&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="0" name="Set text" sid="113591602212893" type="txMenuLanguage">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;language&quot;)</param>
                         </action>
-                        <action id="-16" name="Wait" sid="764772975933806" type="System">
-                            <param id="0" name="Seconds">0.05</param>
+                        <action id="0" name="Set text" sid="138086230206175" type="txMenuSound">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;sound&quot;)</param>
                         </action>
-                        <action id="0" name="Call function" sid="814606370059739" type="Function">
-                            <param id="0" name="Name">&quot;ShowText&quot;</param>
+                        <action id="0" name="Set text" sid="306301519818502" type="txMenuDificuldade">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;difficulty&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="411030950116689" type="txDevelop">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;develop&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="470408991214480" type="txEngine">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;engine&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="573791139620986" type="txDesign">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;design&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="551647494321254" type="txGraphics">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;graphics&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="513859958508128" type="txSounds">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;sounds&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="146221198246746" type="txMenuEasy">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;easy&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="320478390217201" type="txMenuMedium">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;medium&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="314969976197279" type="txMenuHard">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;hard&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="605793460422273">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="575393884420769" type="Touch">
+                            <param id="0" name="Object">txMenuEasy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="235395684827873" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">LEVELEASY</param>
+                        </action>
+                        <action id="0" name="Set item" sid="267163620582424" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Level&quot;</param>
+                            <param id="1" name="Value">LEVELEASY</param>
+                        </action>
+                        <action id="0" name="Call function" sid="438837245267608" type="Function">
+                            <param id="0" name="Name">&quot;LevelOpacity&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="519455061731414">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="821587974164381" type="Touch">
+                            <param id="0" name="Object">txMenuMedium</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="391135692753222" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">LEVELMEDIUM</param>
+                        </action>
+                        <action id="0" name="Set item" sid="452880973808635" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Level&quot;</param>
+                            <param id="1" name="Value">LEVELMEDIUM</param>
+                        </action>
+                        <action id="0" name="Call function" sid="853849154903978" type="Function">
+                            <param id="0" name="Name">&quot;LevelOpacity&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="937051341901759">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="549174206003869" type="Touch">
+                            <param id="0" name="Object">txMenuHard</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="462344186206791" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Value">LEVELHARD</param>
+                        </action>
+                        <action id="0" name="Set item" sid="822043498287200" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Level&quot;</param>
+                            <param id="1" name="Value">LEVELHARD</param>
+                        </action>
+                        <action id="0" name="Call function" sid="172535726048519" type="Function">
+                            <param id="0" name="Name">&quot;LevelOpacity&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="389633397286989">
+                    <conditions>
+                        <condition id="0" name="On function" sid="434673446434318" type="Function">
+                            <param id="0" name="Name">&quot;LevelOpacity&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="905384853445796">
+                        <event-block sid="891089165167977">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="752652200651165" type="icLanguage">
-                                    <param id="0" name="Instance variable">lang</param>
+                                <condition id="-7" name="Compare instance variable" sid="299933894417154" type="txMenuEasy">
+                                    <param id="0" name="Instance variable">level</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Language</param>
+                                    <param id="2" name="Value">Level</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="679108074089281" type="buSelect">
-                                    <param id="0" name="X">icLanguage.X</param>
-                                    <param id="1" name="Y">icLanguage.Y</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="716529343198802" type="icLanguage">
+                                <action id="-16" name="Set opacity" sid="810548406456403" type="txMenuEasy">
                                     <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="801915494755969" type="border">
+                                    <param id="0" name="X">txMenuEasy.X</param>
+                                    <param id="1" name="Y">txMenuEasy.Y</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="356341222062719">
+                        <event-block sid="352135679098975">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="530043019124771" type="icLanguage">
-                                    <param id="0" name="Instance variable">lang</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">Language</param>
+                                <condition id="-7" name="Compare instance variable" sid="842729612500823" type="txMenuMedium">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Level</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Set opacity" sid="135663354438482" type="icLanguage">
+                                <action id="-16" name="Set opacity" sid="554739305443268" type="txMenuMedium">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="441150491840650" type="border">
+                                    <param id="0" name="X">txMenuMedium.X</param>
+                                    <param id="1" name="Y">txMenuMedium.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="277926570042764">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="797548373588625" type="txMenuHard">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Level</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="118735536080587" type="txMenuHard">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="565900235432475" type="border">
+                                    <param id="0" name="X">txMenuHard.X</param>
+                                    <param id="1" name="Y">txMenuHard.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="849705686543039">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="922993179075806" type="txMenu">
+                                    <param id="0" name="Instance variable">level</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">Level</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="348887328713071" type="txMenu">
                                     <param id="0" name="Opacity">40</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="767720508862770">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="341615405546612" type="Touch">
+                            <param id="0" name="Object">txURL</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Open URL in new window" sid="984772166769710" type="Browser">
+                            <param id="0" name="URL">txURL.URL</param>
+                            <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

@@ -4022,8 +4022,8 @@
                         <x>256</x>
                         <y>-128</y>
                         <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
+                        <width>256</width>
+                        <height>256</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -4056,6 +4056,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spLogo2" uid="95">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1056</x>
+                        <y>51</y>
+                        <z>0</z>
+                        <width>328</width>
+                        <height>60</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505882382</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -4468,8 +4490,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1024</x>
-                        <y>32</y>
+                        <x>992</x>
+                        <y>-64</y>
                         <z>0</z>
                         <width>110.851249695</width>
                         <height>73.90083313</height>
@@ -4496,7 +4518,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1088</x>
-                        <y>32</y>
+                        <y>-64</y>
                         <z>0</z>
                         <width>110.851249695</width>
                         <height>73.90083313</height>
@@ -4522,8 +4544,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1184</x>
-                        <y>32</y>
+                        <x>1216</x>
+                        <y>-64</y>
                         <z>0</z>
                         <width>142.851257324</width>
                         <height>73.90083313</height>

@@ -2,7 +2,7 @@
 <c2project>
     <name>Chess Shooter Duel</name>
     <description>Chess shooter duel boardgame</description>
-    <version>2018.04.06.04.26</version>
+    <version>2018.04.14.14.44</version>
     <author>Gray Side Games</author>
     <author-email>contato@grayside.net</author-email>
     <author-website>http://graysite.net</author-website>
@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="McKack" id="CSS_import" version="1">CSS import</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -51,9 +52,9 @@
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Construct 2 splash</prop>
-        <prop name="Orientations">Any</prop>
-        <prop name="Pause on unfocus">No</prop>
-        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D web</prop>
         <prop name="Preload sounds">Yes</prop>
         <prop name="Preview browser">NW.js</prop>
         <prop name="Sampling">Linear</prop>
@@ -564,18 +565,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="125602104681312" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0.502008" original-source="D:\Gray Side Games\Gray Side Games logo.png">
-                        <collision-poly>
-                            <point x="0.403397" y="0.630522" />
-                            <point x="0.501062" y="0.289157" />
-                            <point x="0.878981" y="0.100402" />
-                            <point x="0.957537" y="0.815261" />
-                            <point x="0.55414" y="0.915663" />
-                            <point x="0.501062" y="0.971888" />
-                            <point x="0.418259" y="0.971888" />
-                            <point x="0.00212314" y="0.815261" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.502008" original-source="D:\Gray Side Games\Gray Side Games logo.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -599,9 +589,6 @@
         </object-type>
         <object-type name="AdmobAds" sid="181943401787812">
             <plugin id="admob" />
-        </object-type>
-        <object-type global="1" name="CSSImport" sid="186187693936453">
-            <plugin id="CSS_import" />
         </object-type>
         <object-type name="buConfig" sid="591201459356516">
             <plugin id="Sprite" />
@@ -627,14 +614,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273786535718671" speed="5">
                     <frame duration="1" hotspotX="0.492754" hotspotY="0.568323" original-source="D:\Gray Side\Assets Gray Side\cs_splash.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="spTitle" sid="529661635476584">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="389619618455752" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="D:\Gray Side\Assets Gray Side\csd_logo.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -671,6 +650,111 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="bgWhite0" sid="567203855550953">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="spTitle" sid="467703723641287">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="233273927658421" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502994" original-source="D:\Gray Side\Assets Gray Side\csd_logo.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.461538" />
+                            <point x="0.938776" y="0.384615" />
+                            <point x="0.989796" y="0.5" />
+                            <point x="0.953061" y="0.705128" />
+                            <point x="0.5" y="0.551282" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="buStart" sid="809210661242219">
+            <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="Sine" sid="173010746447972">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="buPC" sid="546667497859740">
+            <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="Sine" sid="256446810311871">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="txMenuLanguage" sid="567289853361329">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txMenuDificuldade" sid="232836795651897">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txMenuSound" sid="528346114635953">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buMenuEasy" sid="180119306572366">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="buMenuMedium" sid="497366496336877">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="buMenuHard" sid="485753359848132">
+            <plugin id="Button" />
+        </object-type>
+        <object-type global="1" name="CSSImport" sid="108771241653502">
+            <plugin id="CSS_import" />
+        </object-type>
+        <object-type name="bgMenu" sid="795058793976872">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="153668805506203" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\bgMenu.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txSingle" sid="877755440891105">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txVs" sid="545255961737648">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="border" sid="702128951072689">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="617370995686811" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gray Side\Pictures\border.png">
+                        <collision-poly>
+                            <point x="0.00469484" y="0.0102041" />
+                            <point x="0.992958" y="0.0153061" />
+                            <point x="0.996479" y="0.992347" />
+                            <point x="0.00704225" y="0.984694" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txMenuEasy" sid="705720182051991">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txMenuMedium" sid="637467943046970">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txMenuHard" sid="673445100013823">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="spLogo2" sid="215021046365020">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974598381040224" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505882" original-source="C:\Users\Gray Side\Google Drive\Logomarca\logo_gray_side.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="tx" plugin-id="Text" sid="497129183118736">
@@ -682,26 +766,41 @@
                 <member>txEngine</member>
                 <member>txGraphics</member>
                 <member>txHorse</member>
+                <member>txMenuDificuldade</member>
+                <member>txMenuEasy</member>
+                <member>txMenuHard</member>
+                <member>txMenuLanguage</member>
+                <member>txMenuMedium</member>
+                <member>txMenuSound</member>
                 <member>txQueen</member>
+                <member>txSingle</member>
                 <member>txSounds</member>
                 <member>txStart</member>
                 <member>txTower</member>
                 <member>txURL</member>
+                <member>txVs</member>
             </members>
+        </family>
+        <family name="txMenu" plugin-id="Text" sid="716700714125273">
+            <members>
+                <member>txMenuEasy</member>
+                <member>txMenuHard</member>
+                <member>txMenuMedium</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="level" sid="146684953452192" type="number" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>
         <layout>Menu.xml</layout>
         <layout>Config.xml</layout>
         <layout>Game.xml</layout>
-        <layout>Credits.xml</layout>
         <layout>Levels.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>evGame.xml</event-sheet>
         <event-sheet>evConfig.xml</event-sheet>
-        <event-sheet>evCredits.xml</event-sheet>
-        <event-sheet>evGlobal.xml</event-sheet>
         <event-sheet>evMenu.xml</event-sheet>
     </event-folder>
     <global-instances>
@@ -776,5 +875,9 @@
         <file name="strings.eng.xml" />
         <file name="strings.esp.xml" />
         <file name="strings.por.xml" />
+        <file name="blackopsone-regular-webfont.woff" />
+        <file name="blackopsone-regular-webfont.woff2" />
+        <file name="font.css" />
+        <file name="main.css" />
     </files-folder>
 </c2project>
