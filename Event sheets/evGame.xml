@@ -1071,6 +1071,31 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="757034768734984">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="338848951937155" type="spPlayers">
+                                    <param id="0" name="Object">spPlayers</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="756166510906472" type="huTurns">
+                                    <param id="0" name="Frame number">6</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="372488783363201" type="huDisplay">
+                                    <param id="0" name="Frame number">4</param>
+                                </action>
+                                <action id="0" name="Play" sid="184984496526904" type="Audio">
+                                    <param id="0" name="Audio file">Tie</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Tie&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="105975270744519" type="System">
+                                    <param id="0" name="Variable">Winner</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="335865718060648">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="545348375180239" type="System">
