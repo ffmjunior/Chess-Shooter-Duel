@@ -27,72 +27,94 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="212907230275327">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="528706803630790" type="buMenuRandom" />
-                    </conditions>
-                    <actions />
                     <sub-events>
-                        <event-block sid="197530194138663">
+                        <event-block sid="977712460894763">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="552252517010281" type="System">
-                                    <param id="0" name="Variable">RandomStart</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="6" name="Set checked" sid="410896114695357" type="buMenuMedium">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="697191729413199">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="862680964762615" type="System">
+                                <condition id="-14" name="Compare variable" sid="500747715948817" type="System">
                                     <param id="0" name="Variable">RandomStart</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="6" name="Set checked" sid="488768989540022" type="buMenuMedium">
-                                    <param id="0" name="State">1</param>
+                                <action id="0" name="Set text" sid="857060946189312" type="buMenuRandomTxt">
+                                    <param id="0" name="Text">&quot;ON&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855912565705604">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="591620852881507" type="System">
+                                    <param id="0" name="Variable">RandomStart</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="583698653014468" type="buMenuRandomTxt">
+                                    <param id="0" name="Text">&quot;OFF&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="431861330304916">
+                <event-block sid="970123873209363">
                     <conditions>
-                        <condition id="1" name="Is checked" sid="492680808076114" type="buMenuRandom" />
+                        <condition id="17" name="On tap object" sid="525666482076964" type="Touch">
+                            <param id="0" name="Object">buMenuRandomTxt</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="445266559103058" type="System">
-                            <param id="0" name="Variable">RandomStart</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set item" sid="668071344510575" type="LocalStorage">
-                            <param id="0" name="Key">&quot;Random&quot;</param>
-                            <param id="1" name="Value">RandomStart</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="821079000323201">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="293466645162730" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="426451910325904" type="System">
-                            <param id="0" name="Variable">RandomStart</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="0" name="Set item" sid="141923556290574" type="LocalStorage">
-                            <param id="0" name="Key">&quot;Random&quot;</param>
-                            <param id="1" name="Value">RandomStart</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="739571104375175">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="250520516568852" type="buMenuRandomTxt">
+                                    <param id="0" name="Text to compare">&quot;ON&quot;</param>
+                                    <param id="1" name="Case sensitivity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="211361229858443" type="buMenuRandomTxt">
+                                    <param id="0" name="Text">&quot;OFF&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="833994116751735" type="System">
+                                    <param id="0" name="Variable">RandomStart</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set item" sid="735062595228535" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;Level&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="563704765676613" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="191024668003774">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="111864579403885" type="buMenuRandomTxt">
+                                    <param id="0" name="Text to compare">&quot;OFF&quot;</param>
+                                    <param id="1" name="Case sensitivity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="536328252918130" type="buMenuRandomTxt">
+                                    <param id="0" name="Text">&quot;ON&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="716260815119932" type="System">
+                                    <param id="0" name="Variable">RandomStart</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set item" sid="322968964799790" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;Level&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="185940213500218" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="403405483797711">
                     <conditions>
@@ -289,7 +311,7 @@
                                 <action id="-16" name="Set opacity" sid="810548406456403" type="txMenuEasy">
                                     <param id="0" name="Opacity">100</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="801915494755969" type="border">
+                                <action id="-3" name="Set position" sid="801915494755969" type="buSelectLevel">
                                     <param id="0" name="X">txMenuEasy.X</param>
                                     <param id="1" name="Y">txMenuEasy.Y</param>
                                 </action>
@@ -307,7 +329,7 @@
                                 <action id="-16" name="Set opacity" sid="554739305443268" type="txMenuMedium">
                                     <param id="0" name="Opacity">100</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="441150491840650" type="border">
+                                <action id="-3" name="Set position" sid="441150491840650" type="buSelectLevel">
                                     <param id="0" name="X">txMenuMedium.X</param>
                                     <param id="1" name="Y">txMenuMedium.Y</param>
                                 </action>
@@ -325,7 +347,7 @@
                                 <action id="-16" name="Set opacity" sid="118735536080587" type="txMenuHard">
                                     <param id="0" name="Opacity">100</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="565900235432475" type="border">
+                                <action id="-3" name="Set position" sid="565900235432475" type="buSelectLevel">
                                     <param id="0" name="X">txMenuHard.X</param>
                                     <param id="1" name="Y">txMenuHard.Y</param>
                                 </action>

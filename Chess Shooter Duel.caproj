@@ -457,7 +457,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="buSelect" sid="821500362365749">
+        <object-type name="buSelectLanguage" sid="821500362365749">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="657123135257388" speed="5">
@@ -724,7 +724,7 @@
         <object-type name="txVs" sid="545255961737648">
             <plugin id="Text" />
         </object-type>
-        <object-type name="border" sid="702128951072689">
+        <object-type name="buSelectLevel" sid="702128951072689">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="617370995686811" speed="5">
@@ -768,10 +768,33 @@
         <object-type name="debugRandom" sid="667607336152182">
             <plugin id="Text" />
         </object-type>
+        <object-type name="buMenuRandomTxt" sid="269164103828556">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buSelectSound" sid="616448606091600">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="391981517111705" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Assets FREEBUNDLE\UI Onscreen Controls\lineDark\lineDark37.png">
+                        <collision-poly>
+                            <point x="0.0208333" y="0.0208333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.979167" y="0.0208333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.979167" y="0.979167" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0208333" y="0.979167" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="tx" plugin-id="Text" sid="497129183118736">
             <members>
+                <member>buMenuRandomTxt</member>
                 <member>txBanner</member>
                 <member>txBishop</member>
                 <member>txDesign</member>

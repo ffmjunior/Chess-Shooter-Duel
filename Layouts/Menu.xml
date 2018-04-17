@@ -236,7 +236,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="border" uid="81">
+                <instance type="buSelectLevel" uid="81">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -258,7 +258,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="border" uid="82">
+                <instance type="buSelectLevel" uid="82">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -184,8 +184,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>400</y>
+                        <x>520</x>
+                        <y>480</y>
                         <z>0</z>
                         <width>80</width>
                         <height>80</height>
@@ -210,7 +210,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>520</x>
-                        <y>200</y>
+                        <y>160</y>
                         <z>0</z>
                         <width>124</width>
                         <height>50</height>
@@ -221,7 +221,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="buSelect" uid="147">
+                <instance type="buSelectLanguage" uid="147">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -232,7 +232,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>200</x>
-                        <y>200</y>
+                        <y>160</y>
                         <z>0</z>
                         <width>140</width>
                         <height>80</height>
@@ -257,7 +257,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>360</x>
-                        <y>200</y>
+                        <y>160</y>
                         <z>0</z>
                         <width>124</width>
                         <height>50</height>
@@ -282,7 +282,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>200</x>
-                        <y>200</y>
+                        <y>160</y>
                         <z>0</z>
                         <width>124</width>
                         <height>50</height>
@@ -319,10 +319,10 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-48,400,0</font>
+                        <font>Arial,-43,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -346,7 +346,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-48,400,0</font>
+                        <font>Arial,-43,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -358,7 +358,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>80</x>
-                        <y>280</y>
+                        <y>440</y>
                         <z>0</z>
                         <width>240</width>
                         <height>80</height>
@@ -373,10 +373,10 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-48,400,0</font>
+                        <font>Arial,-43,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -385,7 +385,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>480</y>
+                        <y>240</y>
                         <z>0</z>
                         <width>360</width>
                         <height>80</height>
@@ -703,7 +703,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>600</y>
+                        <y>360</y>
                         <z>0</z>
                         <width>160</width>
                         <height>80</height>
@@ -733,7 +733,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>520</x>
-                        <y>600</y>
+                        <y>360</y>
                         <z>0</z>
                         <width>160</width>
                         <height>80</height>
@@ -762,8 +762,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>340</x>
-                        <y>600</y>
+                        <x>360</x>
+                        <y>360</y>
                         <z>0</z>
                         <width>160</width>
                         <height>80</height>
@@ -774,7 +774,7 @@
                         <opacity>0.400000006</opacity>
                     </world>
                 </instance>
-                <instance type="border" uid="92">
+                <instance type="buSelectLevel" uid="92">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -784,8 +784,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>340</x>
-                        <y>600</y>
+                        <x>160</x>
+                        <y>360</y>
                         <z>0</z>
                         <width>160</width>
                         <height>80</height>
@@ -800,7 +800,7 @@
                     <properties>
                         <text>RANDOM START</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-48,400,0</font>
+                        <font>Arial,-43,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -811,10 +811,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>480</x>
-                        <y>320</y>
+                        <x>280</x>
+                        <y>600</y>
                         <z>0</z>
-                        <width>240</width>
+                        <width>400</width>
                         <height>120</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -837,8 +837,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>480</x>
-                        <y>400</y>
+                        <x>120</x>
+                        <y>760</y>
                         <z>0</z>
                         <width>80</width>
                         <height>40</height>
@@ -870,6 +870,55 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buSelectSound" uid="99">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>520</x>
+                        <y>600</y>
+                        <z>0</z>
+                        <width>108</width>
+                        <height>80</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buMenuRandomTxt" uid="98">
+                    <properties>
+                        <text>OFF</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-32,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>520</x>
+                        <y>600</y>
+                        <z>0</z>
+                        <width>160</width>
+                        <height>120</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

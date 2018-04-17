@@ -1933,13 +1933,101 @@
                         <action id="-26" name="Restart layout" sid="363750574208621" type="System" />
                     </actions>
                 </event-block>
-                <event-block sid="586562885336884">
+                <event-block sid="831321293040843">
                     <conditions>
-                        <condition id="-22" name="Else" sid="798750154510107" type="System" />
+                        <condition id="-22" name="Else" sid="787778185176484" type="System" />
                     </conditions>
                     <actions>
                         <action id="-21" name="Reset global variables" sid="658979293285970" type="System" />
                         <action id="-26" name="Restart layout" sid="501284483217574" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="302735855607106">
+            <conditions>
+                <condition id="0" name="On function" sid="357801917817319" type="Function">
+                    <param id="0" name="Name">&quot;ResetGame2&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="895960596674093">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="791726699846729" type="System">
+                            <param id="0" name="Variable">Computer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="912538675174235" type="System">
+                            <param id="0" name="Variable">RandomStart</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="731923107444249" type="System" />
+                        <action id="-9" name="Set value" sid="306740147752373" type="System">
+                            <param id="0" name="Variable">Computer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="862843846584312" type="System">
+                            <param id="0" name="Variable">RandomStart</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="644935487276732" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="672915772511587">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="394471784272486" type="System">
+                            <param id="0" name="Variable">Computer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="611617100512667" type="System" />
+                        <action id="-9" name="Set value" sid="268289475955057" type="System">
+                            <param id="0" name="Variable">Computer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="601821701916363" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="186734543835618">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="504471694834647" type="System">
+                            <param id="0" name="Variable">RandomStart</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="943768092987614" type="System" />
+                        <action id="-9" name="Set value" sid="854600685985264" type="System">
+                            <param id="0" name="Variable">RandomStart</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="604401335624767" type="System" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="944145131872237">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="776907167619433" type="System">
+                            <param id="0" name="Variable">RandomStart</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="540282480627623" type="System">
+                            <param id="0" name="Variable">Computer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="704394152127905" type="System" />
+                        <action id="-26" name="Restart layout" sid="764429811152820" type="System" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -1953,7 +2041,19 @@
                     <param id="0" name="Name">&quot;ResetGame&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action disabled="1" id="0" name="Call function" sid="405172721691093" type="Function">
+                    <param id="0" name="Name">&quot;ResetGame2&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
+        </event-block>
+        <event-block sid="735721751061360">
+            <conditions>
+                <condition id="0" name="On function" sid="458104536307531" type="Function">
+                    <param id="0" name="Name">&quot;DeafultVariablesPC&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

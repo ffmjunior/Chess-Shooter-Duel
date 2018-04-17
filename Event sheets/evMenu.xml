@@ -370,7 +370,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="822016990922769" type="buSelect">
+                                <action id="-3" name="Set position" sid="822016990922769" type="buSelectLanguage">
                                     <param id="0" name="X">icLanguage.X</param>
                                     <param id="1" name="Y">icLanguage.Y</param>
                                 </action>
@@ -461,7 +461,7 @@
         </event-group>
         <event-group description="" sid="865237938111563" title="Random Start">
             <sub-events>
-                <event-block sid="924208608298653">
+                <event-block disabled="1" sid="924208608298653">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="360527302175032" type="System" />
                     </conditions>
@@ -471,7 +471,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="374620496166640">
+                <event-block disabled="1" sid="374620496166640">
                     <conditions>
                         <condition id="9" name="On item exists" sid="193926805143830" type="LocalStorage">
                             <param id="0" name="Key">&quot;Random&quot;</param>
@@ -483,7 +483,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="462456350161617">
+                <event-block disabled="1" sid="462456350161617">
                     <conditions>
                         <condition id="1" name="On item get" sid="254046225706238" type="LocalStorage">
                             <param id="0" name="Key">&quot;Random&quot;</param>
@@ -493,6 +493,34 @@
                         <action id="-9" name="Set value" sid="559898963824799" type="System">
                             <param id="0" name="Variable">RandomStart</param>
                             <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="925962423737710">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="591773054558476" type="System">
+                            <param id="0" name="Variable">RandomStart</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="727614577789098" type="buMenuRandomTxt">
+                            <param id="0" name="Text">&quot;ON&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="444142124303378">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="154044133043900" type="System">
+                            <param id="0" name="Variable">RandomStart</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="397528303623619" type="buMenuRandomTxt">
+                            <param id="0" name="Text">&quot;OFF&quot;</param>
                         </action>
                     </actions>
                 </event-block>

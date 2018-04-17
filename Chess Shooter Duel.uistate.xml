@@ -14,8 +14,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="2">Config</layout>
         <layout order="4">Game</layout>
         <event-sheet order="1">evMenu</event-sheet>
-        <event-sheet active="1" order="3">evConfig</event-sheet>
-        <event-sheet order="5">evGame</event-sheet>
+        <event-sheet order="3">evConfig</event-sheet>
+        <event-sheet active="1" order="5">evGame</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -50,7 +50,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/buMusic/" />
         <folder expanded="1" path="animation-folder/buExit/" />
         <folder expanded="1" path="animation-folder/icLanguage/" />
-        <folder expanded="1" path="animation-folder/buSelect/" />
+        <folder expanded="1" path="animation-folder/buSelectLanguage/" />
         <folder expanded="1" path="animation-folder/buBack/" />
         <folder expanded="1" path="animation-folder/spCamera/" />
         <folder expanded="1" path="animation-folder/spShot/" />
@@ -62,7 +62,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/huPlayer2/" />
         <folder expanded="1" path="animation-folder/spTitle/" />
         <folder expanded="1" path="animation-folder/bgMenu/" />
-        <folder expanded="1" path="animation-folder/border/" />
+        <folder expanded="1" path="animation-folder/buSelectLevel/" />
         <folder expanded="1" path="animation-folder/spLogo2/" />
+        <folder expanded="1" path="animation-folder/buSelectSound/" />
     </folders-expanded>
 </c2uistate>
