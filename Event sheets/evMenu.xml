@@ -3,6 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evMenu</name>
     <events>
+        <event-block sid="527514420681106">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="715485215183338" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="839910112871100" type="debugRandom">
+                    <param id="0" name="Text">RandomStart</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="391241580002451" title="Start Menu">
             <sub-events>
                 <event-block sid="929344335789428">
@@ -444,6 +454,45 @@
                         <action id="0" name="Call function" sid="123462239601466" type="Function">
                             <param id="0" name="Name">&quot;LevelOpacity&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="865237938111563" title="Random Start">
+            <sub-events>
+                <event-block sid="924208608298653">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="360527302175032" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="210990616573627" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Random&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="374620496166640">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="193926805143830" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Random&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="589774925400175" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Random&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="462456350161617">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="254046225706238" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Random&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="559898963824799" type="System">
+                            <param id="0" name="Variable">RandomStart</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
                         </action>
                     </actions>
                 </event-block>

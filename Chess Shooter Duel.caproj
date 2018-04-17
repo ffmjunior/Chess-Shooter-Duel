@@ -20,6 +20,7 @@
         <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
@@ -755,6 +756,18 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="txtMenuRandomStart" sid="410891692798688">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buMenuRandom" sid="924971112347270">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="TextBox" sid="973774275507463">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="debugRandom" sid="667607336152182">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="tx" plugin-id="Text" sid="497129183118736">
@@ -776,6 +789,7 @@
                 <member>txSingle</member>
                 <member>txSounds</member>
                 <member>txStart</member>
+                <member>txtMenuRandomStart</member>
                 <member>txTower</member>
                 <member>txURL</member>
                 <member>txVs</member>
