@@ -52,7 +52,7 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Portrait</prop>
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Physics engine">Box2D web</prop>
@@ -659,17 +659,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="233273927658421" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502994" original-source="D:\Gray Side\Assets Gray Side\csd_logo.png">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.5" y="0.461538" />
-                            <point x="0.938776" y="0.384615" />
-                            <point x="0.989796" y="0.5" />
-                            <point x="0.953061" y="0.705128" />
-                            <point x="0.5" y="0.551282" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.50039" hotspotY="0.504021" original-source="C:\Users\Gray Side\Google Drive\Logomarca\logo_chess_shooter_duel.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -764,9 +754,6 @@
         </object-type>
         <object-type name="TextBox" sid="973774275507463">
             <plugin id="TextBox" />
-        </object-type>
-        <object-type name="debugRandom" sid="667607336152182">
-            <plugin id="Text" />
         </object-type>
         <object-type name="buMenuRandomTxt" sid="269164103828556">
             <plugin id="Text" />

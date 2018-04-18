@@ -3,16 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evConfig</name>
     <events>
-        <event-block sid="637501947138039">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="116855338758829" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="765068313603805" type="debugRandom">
-                    <param id="0" name="Text">RandomStart</param>
-                </action>
-            </actions>
-        </event-block>
         <include>evMenu</include>
         <variable constant="0" name="Language" sid="549682877004386" static="0" type="text">por</variable>
         <event-group description="" sid="866744370159450" title="Start Config">
@@ -82,7 +72,7 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="0" name="Set item" sid="735062595228535" type="LocalStorage">
-                                    <param id="0" name="Key">&quot;Level&quot;</param>
+                                    <param id="0" name="Key">&quot;Random&quot;</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="563704765676613" type="System">
@@ -106,7 +96,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="0" name="Set item" sid="322968964799790" type="LocalStorage">
-                                    <param id="0" name="Key">&quot;Level&quot;</param>
+                                    <param id="0" name="Key">&quot;Random&quot;</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="185940213500218" type="System">
