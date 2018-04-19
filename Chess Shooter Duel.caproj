@@ -777,6 +777,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="debugLevel" sid="938277414170080">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="tx" plugin-id="Text" sid="497129183118736">
