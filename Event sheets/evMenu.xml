@@ -172,11 +172,19 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="181088834888670" type="Audio">
+                                <action disabled="1" id="0" name="Play" sid="181088834888670" type="Audio">
                                     <param id="0" name="Audio file">BgMusic1</param>
                                     <param id="2" name="Loop">1</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;Music1&quot;</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set item" sid="442391147567543" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;Sound&quot;</param>
+                                    <param id="1" name="Value">&quot;0&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="283468070759784" type="Function">
+                                    <param id="0" name="Name">&quot;SetSound&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -188,14 +196,22 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="6" name="Stop" sid="298363861963901" type="Audio">
+                                <action disabled="1" id="6" name="Stop" sid="298363861963901" type="Audio">
                                     <param id="0" name="Tag">&quot;Music1&quot;</param>
                                 </action>
-                                <action id="0" name="Play" sid="433313952888936" type="Audio">
+                                <action disabled="1" id="0" name="Play" sid="433313952888936" type="Audio">
                                     <param id="0" name="Audio file">BgMusic2</param>
                                     <param id="2" name="Loop">1</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;Music2&quot;</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set item" sid="634884571095415" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;Sound&quot;</param>
+                                    <param id="1" name="Value">&quot;1&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="661768036938159" type="Function">
+                                    <param id="0" name="Name">&quot;SetSound&quot;</param>
+                                    <param id="1" name="Parameter {n}">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -207,14 +223,22 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="6" name="Stop" sid="911183796626685" type="Audio">
+                                <action disabled="1" id="6" name="Stop" sid="911183796626685" type="Audio">
                                     <param id="0" name="Tag">&quot;Music2&quot;</param>
                                 </action>
-                                <action id="0" name="Play" sid="858261075552998" type="Audio">
+                                <action disabled="1" id="0" name="Play" sid="858261075552998" type="Audio">
                                     <param id="0" name="Audio file">BgMusic3</param>
                                     <param id="2" name="Loop">1</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;Music3&quot;</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set item" sid="566104903901724" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;Sound&quot;</param>
+                                    <param id="1" name="Value">&quot;2&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="678834396793366" type="Function">
+                                    <param id="0" name="Name">&quot;SetSound&quot;</param>
+                                    <param id="1" name="Parameter {n}">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -226,14 +250,22 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="6" name="Stop" sid="783155163026389" type="Audio">
+                                <action disabled="1" id="6" name="Stop" sid="783155163026389" type="Audio">
                                     <param id="0" name="Tag">&quot;Music1&quot;</param>
                                 </action>
-                                <action id="6" name="Stop" sid="398940556704382" type="Audio">
+                                <action disabled="1" id="6" name="Stop" sid="398940556704382" type="Audio">
                                     <param id="0" name="Tag">&quot;Music2&quot;</param>
                                 </action>
-                                <action id="6" name="Stop" sid="923687746824607" type="Audio">
+                                <action disabled="1" id="6" name="Stop" sid="923687746824607" type="Audio">
                                     <param id="0" name="Tag">&quot;Music3&quot;</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set item" sid="936141654962602" type="LocalStorage">
+                                    <param id="0" name="Key">&quot;Sound&quot;</param>
+                                    <param id="1" name="Value">&quot;3&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="809577489645556" type="Function">
+                                    <param id="0" name="Name">&quot;SetSound&quot;</param>
+                                    <param id="1" name="Parameter {n}">3</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -485,6 +517,163 @@
                             <param id="1" name="Value">LocalStorage.ItemValue</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="355628880643501" title="SOUND">
+            <sub-events>
+                <event-block sid="127252589472478">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="577658050197705" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="698410347976138" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="522026831478161">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="256867387904089" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="362338144351469" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="603116425410896">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="283151021442820" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="634097342826564" type="buMusic">
+                            <param id="0" name="Frame number">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="631908008701950" type="Function">
+                            <param id="0" name="Name">&quot;SetSound&quot;</param>
+                            <param id="1" name="Parameter {n}">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="216655599339733">
+                    <conditions>
+                        <condition id="0" name="On function" sid="199423908165314" type="Function">
+                            <param id="0" name="Name">&quot;SetSound&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="sound" sid="369351715407468" static="0" type="number">-1</variable>
+                        <event-block sid="401613156909921">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="328968650907643" type="System">
+                                    <param id="0" name="Variable">sound</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="839585011076523">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="944667983075357" type="System">
+                                            <param id="0" name="Variable">sound</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="597470488361806" type="Audio">
+                                            <param id="0" name="Audio file">BgMusic1</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;Music1&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="475368858593089" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                                            <param id="1" name="Value">&quot;0&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="392113485681560">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="281694185024242" type="System">
+                                            <param id="0" name="Variable">sound</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="633635477560523" type="Audio">
+                                            <param id="0" name="Tag">&quot;Music1&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="584753164772352" type="Audio">
+                                            <param id="0" name="Audio file">BgMusic2</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;Music2&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="479095749244832" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                                            <param id="1" name="Value">&quot;1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="279338675958061">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="746611568182777" type="System">
+                                            <param id="0" name="Variable">sound</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="167737626124411" type="Audio">
+                                            <param id="0" name="Tag">&quot;Music2&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="599480200571077" type="Audio">
+                                            <param id="0" name="Audio file">BgMusic3</param>
+                                            <param id="2" name="Loop">1</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;Music3&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="793512702110923" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                                            <param id="1" name="Value">&quot;2&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="901052838119867">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="794284145815659" type="System">
+                                            <param id="0" name="Variable">sound</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="448181642276769" type="Audio">
+                                            <param id="0" name="Tag">&quot;Music1&quot;</param>
+                                        </action>
+                                        <action id="6" name="Stop" sid="722466136974756" type="Audio">
+                                            <param id="0" name="Tag">&quot;Music2&quot;</param>
+                                        </action>
+                                        <action id="6" name="Stop" sid="351905524444218" type="Audio">
+                                            <param id="0" name="Tag">&quot;Music3&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="292732386636265" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;Sound&quot;</param>
+                                            <param id="1" name="Value">&quot;3&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
