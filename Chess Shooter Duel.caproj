@@ -749,9 +749,6 @@
         <object-type name="txtMenuRandomStart" sid="410891692798688">
             <plugin id="Text" />
         </object-type>
-        <object-type name="buMenuRandom" sid="924971112347270">
-            <plugin id="Button" />
-        </object-type>
         <object-type name="TextBox" sid="973774275507463">
             <plugin id="TextBox" />
         </object-type>
@@ -778,6 +775,9 @@
             </animation-folder>
         </object-type>
         <object-type name="debugLevel" sid="938277414170080">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buTest" sid="589943405361282">
             <plugin id="Text" />
         </object-type>
     </object-folder>
