@@ -752,7 +752,7 @@
         <object-type name="TextBox" sid="973774275507463">
             <plugin id="TextBox" />
         </object-type>
-        <object-type name="buMenuRandomTxt" sid="269164103828556">
+        <object-type name="buRandomOff" sid="269164103828556">
             <plugin id="Text" />
         </object-type>
         <object-type name="buSelectSound" sid="616448606091600">
@@ -780,11 +780,34 @@
         <object-type name="buTest" sid="589943405361282">
             <plugin id="Text" />
         </object-type>
+        <object-type name="buRandomOn" sid="639504618866027">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buSelectRandom" sid="950328426939015">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367316867674575" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Assets FREEBUNDLE\UI Onscreen Controls\lineDark\lineDark37.png">
+                        <collision-poly>
+                            <point x="0.0208333" y="0.0208333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.979167" y="0.0208333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.979167" y="0.979167" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0208333" y="0.979167" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="tx" plugin-id="Text" sid="497129183118736">
             <members>
-                <member>buMenuRandomTxt</member>
+                <member>buRandomOff</member>
+                <member>buRandomOn</member>
                 <member>txBanner</member>
                 <member>txBishop</member>
                 <member>txDesign</member>

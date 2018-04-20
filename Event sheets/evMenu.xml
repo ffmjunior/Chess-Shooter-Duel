@@ -449,9 +449,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" disabled="1" sid="865237938111563" title="Random Start">
+        <event-group description="" sid="865237938111563" title="Random Start">
             <sub-events>
-                <event-block disabled="1" sid="924208608298653">
+                <event-block sid="924208608298653">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="360527302175032" type="System" />
                     </conditions>
@@ -461,7 +461,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="374620496166640">
+                <event-block sid="374620496166640">
                     <conditions>
                         <condition id="9" name="On item exists" sid="193926805143830" type="LocalStorage">
                             <param id="0" name="Key">&quot;Random&quot;</param>
@@ -473,7 +473,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="462456350161617">
+                <event-block sid="462456350161617">
                     <conditions>
                         <condition id="1" name="On item get" sid="254046225706238" type="LocalStorage">
                             <param id="0" name="Key">&quot;Random&quot;</param>

@@ -27,8 +27,9 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="857060946189312" type="buMenuRandomTxt">
-                                    <param id="0" name="Text">&quot;ON&quot;</param>
+                                <action id="-3" name="Set position" sid="636060272931170" type="buSelectRandom">
+                                    <param id="0" name="X">buRandomOn.X</param>
+                                    <param id="1" name="Y">buRandomOn.Y</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -41,60 +42,53 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="583698653014468" type="buMenuRandomTxt">
-                                    <param id="0" name="Text">&quot;OFF&quot;</param>
+                                <action id="-3" name="Set position" sid="566176298686094" type="buSelectRandom">
+                                    <param id="0" name="X">buRandomOff.X</param>
+                                    <param id="1" name="Y">buRandomOff.Y</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="970123873209363">
+                <event-block sid="686494438508224">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="525666482076964" type="Touch">
-                            <param id="0" name="Object">buMenuRandomTxt</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="193214380570681" type="System">
-                            <param id="0" name="Variable">RandomStart</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="17" name="On tap object" sid="984716529601089" type="Touch">
+                            <param id="0" name="Object">buRandomOff</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set item" sid="322968964799790" type="LocalStorage">
-                            <param id="0" name="Key">&quot;Random&quot;</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="716260815119932" type="System">
+                        <action id="-9" name="Set value" sid="580227158817234" type="System">
                             <param id="0" name="Variable">RandomStart</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">0</param>
                         </action>
-                        <action id="0" name="Set text" sid="536328252918130" type="buMenuRandomTxt">
-                            <param id="0" name="Text">&quot;ON&quot;</param>
+                        <action id="-3" name="Set position" sid="798795293166281" type="buSelectRandom">
+                            <param id="0" name="X">buRandomOff.X</param>
+                            <param id="1" name="Y">buRandomOff.Y</param>
+                        </action>
+                        <action id="0" name="Set item" sid="754793041298459" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Random&quot;</param>
+                            <param id="1" name="Value">&quot;0&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="775010851083691">
+                <event-block sid="961496489713527">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="597708459935200" type="Touch">
-                            <param id="0" name="Object">buMenuRandomTxt</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="735764096948152" type="System">
-                            <param id="0" name="Variable">RandomStart</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="17" name="On tap object" sid="227289918169776" type="Touch">
+                            <param id="0" name="Object">buRandomOn</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set item" sid="272005943629614" type="LocalStorage">
-                            <param id="0" name="Key">&quot;Random&quot;</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="173308981590065" type="System">
+                        <action id="-9" name="Set value" sid="411358810107316" type="System">
                             <param id="0" name="Variable">RandomStart</param>
-                            <param id="1" name="Value">0</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Set text" sid="370463005911063" type="buMenuRandomTxt">
-                            <param id="0" name="Text">&quot;OFF&quot;</param>
+                        <action id="-3" name="Set position" sid="511796424371023" type="buSelectRandom">
+                            <param id="0" name="X">buRandomOn.X</param>
+                            <param id="1" name="Y">buRandomOn.Y</param>
+                        </action>
+                        <action id="0" name="Set item" sid="426179706320550" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Random&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
                         </action>
                     </actions>
                 </event-block>
