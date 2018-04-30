@@ -567,7 +567,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-37,400,0</font>
+                        <font>Arial,-43,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -581,7 +581,7 @@
                         <x>220</x>
                         <y>600</y>
                         <z>0</z>
-                        <width>360</width>
+                        <width>280</width>
                         <height>120</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
