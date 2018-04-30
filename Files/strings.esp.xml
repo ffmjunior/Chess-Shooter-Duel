@@ -11,11 +11,12 @@
 	<string id='engine'>MOTOR</string>
 	<string id='graphics'>GRÁFICOS</string>
 	<string id='sounds'>SONIDOS</string>
+	<string id='random'>COMIENZO ALEATORIO</string>
 	<string id='bishop'>Obispo</string>
 	<string id='horse'>Cavallo</string>
 	<string id='queen'>Reina</string>
 	<string id='tower'>Torre</string>
 	<string id='easy'>Fácil</string>
-	<string id='medium'>Media</string>
+	<string id='medium'>Medio</string>
 	<string id='hard'>Difícil</string>
 </strings>

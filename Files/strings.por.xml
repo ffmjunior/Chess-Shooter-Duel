@@ -11,6 +11,7 @@
 	<string id='engine'>MOTOR</string>
 	<string id='graphics'>GRÁFICOS</string>
 	<string id='sounds'>SONS</string>
+	<string id='random'>INÍCIO ALEATÓRIO</string>
 	<string id='bishop'>Bispo</string>
 	<string id='horse'>Cavalo</string>
 	<string id='queen'>Rainha</string>

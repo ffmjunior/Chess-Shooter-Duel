@@ -11,6 +11,7 @@
 	<string id='engine'>ENGINE</string>
 	<string id='graphics'>GRAPHICS</string>
 	<string id='sounds'>SOUNDS</string>
+	<string id='random'>RANDOM START</string>
 	<string id='bishop'>Bishop</string>
 	<string id='horse'>Horse</string>
 	<string id='queen'>Queen</string>

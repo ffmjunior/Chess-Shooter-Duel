@@ -64,6 +64,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="241897115999538" type="System">
+                            <param id="0" name="Variable">Computer</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="868372026285644" type="System">
                             <param id="0" name="Layout">Game</param>
                         </action>

@@ -28,6 +28,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="212839328414415" type="Function">
+                            <param id="0" name="Name">&quot;DestroyGridMove&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="-15" name="Set visible" sid="730805988925404" type="txBishop">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -151,6 +155,190 @@
                                     <param id="1" name="Value">-1</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="897701494184395">
+                    <conditions>
+                        <condition id="0" name="On function" sid="609180615061912" type="Function">
+                            <param id="0" name="Name">&quot;StartLayout&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="412596668664341" type="System" />
+                        <action id="-2" name="Go to layout" sid="660117063401963" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="917661371538707">
+                    <conditions>
+                        <condition id="0" name="On function" sid="799322279807633" type="Function">
+                            <param id="0" name="Name">&quot;ResetGameVariables&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="243787890678517" type="System">
+                            <param id="0" name="Variable">ClickedMove</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="137608056745936" type="System">
+                            <param id="0" name="Variable">Destroyed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="378398808880156" type="System">
+                            <param id="0" name="Variable">MovedPlayers</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="834490972011640" type="System">
+                            <param id="0" name="Variable">PlayerTurn</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="619140219508956" type="System">
+                            <param id="0" name="Variable">Player_X</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="767399736170455" type="System">
+                            <param id="0" name="Variable">Player_Y</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="118079065036897" type="System">
+                            <param id="0" name="Variable">Winner</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="307805866604913" type="System" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="902619229185384">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="656042267943176" type="System">
+                                    <param id="0" name="Object">spPlayers</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="542764899177770" type="spPlayers">
+                                    <param id="0" name="Instance variable">moved</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="724669577487536" type="spPlayers">
+                                    <param id="0" name="Instance variable">curX</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="424391895644213" type="spPlayers">
+                                    <param id="0" name="Instance variable">curY</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="629150436290091" type="spPlayers">
+                                    <param id="0" name="Instance variable">nextX</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="744006038262980" type="spPlayers">
+                                    <param id="0" name="Instance variable">nextY</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="402399171560240">
+                    <conditions>
+                        <condition id="0" name="On function" sid="753682054551417" type="Function">
+                            <param id="0" name="Name">&quot;ResetGame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="615296170936003">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="333099055495273" type="System">
+                                    <param id="0" name="Variable">Computer</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="708174243928216">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="781864589713058" type="System">
+                                            <param id="0" name="Variable">RandomStart</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-21" name="Reset global variables" sid="886497269736650" type="System" />
+                                        <action id="-9" name="Set value" sid="249836510701802" type="System">
+                                            <param id="0" name="Variable">Computer</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="605022723690783" type="System">
+                                            <param id="0" name="Variable">RandomStart</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-26" name="Restart layout" sid="201471520235454" type="System" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="389649977602913">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="293182032292563" type="System">
+                                            <param id="0" name="Variable">RandomStart</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-21" name="Reset global variables" sid="583617154422797" type="System" />
+                                        <action id="-9" name="Set value" sid="305410762177181" type="System">
+                                            <param id="0" name="Variable">Computer</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-26" name="Restart layout" sid="906747441808029" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="515865500888211">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="421421064038118" type="System">
+                                    <param id="0" name="Variable">Computer</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="908866516519505">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="153844284896241" type="System">
+                                            <param id="0" name="Variable">RandomStart</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-21" name="Reset global variables" sid="643887601742311" type="System" />
+                                        <action id="-9" name="Set value" sid="193131009142492" type="System">
+                                            <param id="0" name="Variable">RandomStart</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-26" name="Restart layout" sid="910953562610599" type="System" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="140589665996182">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="477321966058505" type="System">
+                                            <param id="0" name="Variable">RandomStart</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-21" name="Reset global variables" sid="669442615875175" type="System" />
+                                        <action id="-26" name="Restart layout" sid="964652487213589" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -525,258 +713,316 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="417889449554245">
+                <event-block sid="631379944743090">
                     <conditions>
-                        <condition id="0" name="On function" sid="955210335652418" type="Function">
-                            <param id="0" name="Name">&quot;HorseIA&quot;</param>
+                        <condition id="0" name="On function" sid="869404315447121" type="Function">
+                            <param id="0" name="Name">&quot;SimpleMove&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <variable constant="0" name="gridX" sid="845615744406638" static="0" type="number">0</variable>
-                        <variable constant="0" name="gridY" sid="909815805554932" static="0" type="number">0</variable>
-                        <event-block sid="245204820660046">
+                        <variable constant="0" name="gridX" sid="718055093372357" static="0" type="number">0</variable>
+                        <variable constant="0" name="gridY" sid="778058979547452" static="0" type="number">0</variable>
+                        <event-block sid="164929467272981">
                             <conditions />
                             <actions>
-                                <action id="-9" name="Set value" sid="381223623414653" type="System">
+                                <action id="-9" name="Set value" sid="662569581849872" type="System">
                                     <param id="0" name="Variable">gridX</param>
                                     <param id="1" name="Value">Function.Param(0)</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="414548986470181" type="System">
+                                <action id="-9" name="Set value" sid="132306193956510" type="System">
                                     <param id="0" name="Variable">gridY</param>
                                     <param id="1" name="Value">Function.Param(1)</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="392878201080441">
+                                <event-block sid="703557189072953">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="724884380208579" type="spGrid">
+                                        <condition id="-7" name="Compare instance variable" sid="369674549359905" type="spGrid">
                                             <param id="0" name="Instance variable">gX</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">gridX + 0</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="347282643045649" type="spGrid">
+                                        <condition id="-7" name="Compare instance variable" sid="442413183254785" type="spGrid">
                                             <param id="0" name="Instance variable">gY</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">gridY + 0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Create object" sid="640082923295859" type="System">
+                                        <action id="-3" name="Create object" sid="846986167208237" type="System">
                                             <param id="0" name="Object to create">spGridMove</param>
                                             <param id="1" name="Layer">&quot;Grid&quot;</param>
                                             <param id="2" name="X">spGrid.X</param>
                                             <param id="3" name="Y">spGrid.Y</param>
                                         </action>
-                                        <action id="5" name="Set frame" sid="553829354758447" type="spGridMove">
+                                        <action id="5" name="Set frame" sid="993227310107809" type="spGridMove">
                                             <param id="0" name="Frame number">PlayerTurn</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="596608077364873">
+                                <event-block sid="161688687067507">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="992434312565436" type="spGrid">
+                                        <condition id="-7" name="Compare instance variable" sid="221120926988715" type="spGrid">
                                             <param id="0" name="Instance variable">gX</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">gridX + 1</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="145631849904632" type="spGrid">
+                                        <condition id="-7" name="Compare instance variable" sid="248363246717953" type="spGrid">
                                             <param id="0" name="Instance variable">gY</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridY + 2</param>
+                                            <param id="2" name="Value">gridY  + 0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Create object" sid="640242852712276" type="System">
+                                        <action id="-3" name="Create object" sid="196353584444915" type="System">
                                             <param id="0" name="Object to create">spGridMove</param>
                                             <param id="1" name="Layer">&quot;Grid&quot;</param>
                                             <param id="2" name="X">spGrid.X</param>
                                             <param id="3" name="Y">spGrid.Y</param>
                                         </action>
-                                        <action id="5" name="Set frame" sid="705375292420815" type="spGridMove">
+                                        <action id="5" name="Set frame" sid="175088397118817" type="spGridMove">
                                             <param id="0" name="Frame number">PlayerTurn</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="354651998659422">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="586225977078231" type="spGrid">
-                                            <param id="0" name="Instance variable">gX</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridX + 2</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="806306995194095" type="spGrid">
-                                            <param id="0" name="Instance variable">gY</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridY + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="434800999580686" type="System">
-                                            <param id="0" name="Object to create">spGridMove</param>
-                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
-                                            <param id="2" name="X">spGrid.X</param>
-                                            <param id="3" name="Y">spGrid.Y</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="740866204580135" type="spGridMove">
-                                            <param id="0" name="Frame number">PlayerTurn</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="463240577932734">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="376526276697137" type="spGrid">
-                                            <param id="0" name="Instance variable">gX</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridX - 1</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="261090112584482" type="spGrid">
-                                            <param id="0" name="Instance variable">gY</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridY + 2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="315695298162434" type="System">
-                                            <param id="0" name="Object to create">spGridMove</param>
-                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
-                                            <param id="2" name="X">spGrid.X</param>
-                                            <param id="3" name="Y">spGrid.Y</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="427796334823459" type="spGridMove">
-                                            <param id="0" name="Frame number">PlayerTurn</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="796277973866023">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="336560118670145" type="spGrid">
-                                            <param id="0" name="Instance variable">gX</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridX - 2</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="645851238345194" type="spGrid">
-                                            <param id="0" name="Instance variable">gY</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridY + 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="850217309810568" type="System">
-                                            <param id="0" name="Object to create">spGridMove</param>
-                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
-                                            <param id="2" name="X">spGrid.X</param>
-                                            <param id="3" name="Y">spGrid.Y</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="806760205872505" type="spGridMove">
-                                            <param id="0" name="Frame number">PlayerTurn</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="687925759539591">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="953968962646542" type="spGrid">
-                                            <param id="0" name="Instance variable">gX</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridX - 2</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="809783533426966" type="spGrid">
-                                            <param id="0" name="Instance variable">gY</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridY - 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="327274866259424" type="System">
-                                            <param id="0" name="Object to create">spGridMove</param>
-                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
-                                            <param id="2" name="X">spGrid.X</param>
-                                            <param id="3" name="Y">spGrid.Y</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="676330470002067" type="spGridMove">
-                                            <param id="0" name="Frame number">PlayerTurn</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="914606680754893">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="272383758703804" type="spGrid">
-                                            <param id="0" name="Instance variable">gX</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridX - 1</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="264827305001735" type="spGrid">
-                                            <param id="0" name="Instance variable">gY</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridY - 2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="235954747401885" type="System">
-                                            <param id="0" name="Object to create">spGridMove</param>
-                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
-                                            <param id="2" name="X">spGrid.X</param>
-                                            <param id="3" name="Y">spGrid.Y</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="457054940530222" type="spGridMove">
-                                            <param id="0" name="Frame number">PlayerTurn</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="879152910862612">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="817001499762680" type="spGrid">
-                                            <param id="0" name="Instance variable">gX</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridX + 1</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="303620222333723" type="spGrid">
-                                            <param id="0" name="Instance variable">gY</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridY - 2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="194558220318816" type="System">
-                                            <param id="0" name="Object to create">spGridMove</param>
-                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
-                                            <param id="2" name="X">spGrid.X</param>
-                                            <param id="3" name="Y">spGrid.Y</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="406270360832033" type="spGridMove">
-                                            <param id="0" name="Frame number">PlayerTurn</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="647672816402654">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="114331778737330" type="spGrid">
-                                            <param id="0" name="Instance variable">gX</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridX + 2</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="293800367183611" type="spGrid">
-                                            <param id="0" name="Instance variable">gY</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">gridY - 1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="613177357192387" type="System">
-                                            <param id="0" name="Object to create">spGridMove</param>
-                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
-                                            <param id="2" name="X">spGrid.X</param>
-                                            <param id="3" name="Y">spGrid.Y</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="411802299110555" type="spGridMove">
-                                            <param id="0" name="Frame number">PlayerTurn</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="276369814650064">
+                                <event-block sid="510682467133743">
                                     <conditions />
                                     <actions>
-                                        <action id="-24" name="Move to top" sid="593516973149149" type="spPlayers" />
+                                        <action id="-24" name="Move to top" sid="188834760543183" type="spPlayers" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="994569363616148">
+                    <conditions>
+                        <condition id="0" name="On function" sid="862359414413982" type="Function">
+                            <param id="0" name="Name">&quot;HorseIA&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="gridX" sid="738793169908847" static="0" type="number">0</variable>
+                        <variable constant="0" name="gridY" sid="911652080093893" static="0" type="number">0</variable>
+                        <event-block sid="555641004905672">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="192276366841194" type="System">
+                                    <param id="0" name="Variable">gridX</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="724432317394817" type="System">
+                                    <param id="0" name="Variable">gridY</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="232371024520308">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="384514876372841" type="spGrid">
+                                            <param id="0" name="Instance variable">gX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridX + 1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="668549498531488" type="spGrid">
+                                            <param id="0" name="Instance variable">gY</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridY + 2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="199892393846143" type="System">
+                                            <param id="0" name="Object to create">spGridMove</param>
+                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
+                                            <param id="2" name="X">spGrid.X</param>
+                                            <param id="3" name="Y">spGrid.Y</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="785452168244638" type="spGridMove">
+                                            <param id="0" name="Frame number">PlayerTurn</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="911144029310784">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="847118893559644" type="spGrid">
+                                            <param id="0" name="Instance variable">gX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridX + 2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="517105590372224" type="spGrid">
+                                            <param id="0" name="Instance variable">gY</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridY + 1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="620084288956520" type="System">
+                                            <param id="0" name="Object to create">spGridMove</param>
+                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
+                                            <param id="2" name="X">spGrid.X</param>
+                                            <param id="3" name="Y">spGrid.Y</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="262710263113635" type="spGridMove">
+                                            <param id="0" name="Frame number">PlayerTurn</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="132332096596728">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="760047577201768" type="spGrid">
+                                            <param id="0" name="Instance variable">gX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridX - 1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="781305225050769" type="spGrid">
+                                            <param id="0" name="Instance variable">gY</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridY + 2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="674796322332752" type="System">
+                                            <param id="0" name="Object to create">spGridMove</param>
+                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
+                                            <param id="2" name="X">spGrid.X</param>
+                                            <param id="3" name="Y">spGrid.Y</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="478581298275529" type="spGridMove">
+                                            <param id="0" name="Frame number">PlayerTurn</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="879815486643630">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="683611139017990" type="spGrid">
+                                            <param id="0" name="Instance variable">gX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridX - 2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="438297872166114" type="spGrid">
+                                            <param id="0" name="Instance variable">gY</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridY + 1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="627650828232051" type="System">
+                                            <param id="0" name="Object to create">spGridMove</param>
+                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
+                                            <param id="2" name="X">spGrid.X</param>
+                                            <param id="3" name="Y">spGrid.Y</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="500626517374986" type="spGridMove">
+                                            <param id="0" name="Frame number">PlayerTurn</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="292235094442133">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="160733663745102" type="spGrid">
+                                            <param id="0" name="Instance variable">gX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridX - 2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="949194103420398" type="spGrid">
+                                            <param id="0" name="Instance variable">gY</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridY - 1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="657812165399958" type="System">
+                                            <param id="0" name="Object to create">spGridMove</param>
+                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
+                                            <param id="2" name="X">spGrid.X</param>
+                                            <param id="3" name="Y">spGrid.Y</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="475689937693963" type="spGridMove">
+                                            <param id="0" name="Frame number">PlayerTurn</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="742755717940383">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="281225322699668" type="spGrid">
+                                            <param id="0" name="Instance variable">gX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridX - 1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="603783847053978" type="spGrid">
+                                            <param id="0" name="Instance variable">gY</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridY - 2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="609804354858936" type="System">
+                                            <param id="0" name="Object to create">spGridMove</param>
+                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
+                                            <param id="2" name="X">spGrid.X</param>
+                                            <param id="3" name="Y">spGrid.Y</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="648622718239630" type="spGridMove">
+                                            <param id="0" name="Frame number">PlayerTurn</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="617998385951246">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="440885440410060" type="spGrid">
+                                            <param id="0" name="Instance variable">gX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridX + 1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="386802291517665" type="spGrid">
+                                            <param id="0" name="Instance variable">gY</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridY - 2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="989846204835015" type="System">
+                                            <param id="0" name="Object to create">spGridMove</param>
+                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
+                                            <param id="2" name="X">spGrid.X</param>
+                                            <param id="3" name="Y">spGrid.Y</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="177614457553580" type="spGridMove">
+                                            <param id="0" name="Frame number">PlayerTurn</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="677859708120009">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="439507417786813" type="spGrid">
+                                            <param id="0" name="Instance variable">gX</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridX + 2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="551466563347606" type="spGrid">
+                                            <param id="0" name="Instance variable">gY</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">gridY - 1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="917907412750516" type="System">
+                                            <param id="0" name="Object to create">spGridMove</param>
+                                            <param id="1" name="Layer">&quot;Grid&quot;</param>
+                                            <param id="2" name="X">spGrid.X</param>
+                                            <param id="3" name="Y">spGrid.Y</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="724670046860495" type="spGridMove">
+                                            <param id="0" name="Frame number">PlayerTurn</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="976628481757706">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-24" name="Move to top" sid="680916120483645" type="spPlayers" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1451,8 +1697,16 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="678608246948249" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="678608246948249" type="Function">
                                     <param id="0" name="Name">&quot;ResetGame&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="110704941678356" type="Function">
+                                    <param id="0" name="Name">&quot;ResetGameVariables&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="205107390393665" type="Function">
+                                    <param id="0" name="Name">&quot;StartLayout&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -1789,6 +2043,25 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="563656371427057">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="676627224753558" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Call function" sid="971549835588215" type="Function">
+                            <param id="0" name="Name">&quot;ResetGame&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="754777298979365" type="Function">
+                            <param id="0" name="Name">&quot;ResetGameVariables&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="158740158528045" type="Function">
+                            <param id="0" name="Name">&quot;StartLayout&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="160187217392824" title="Computer AI">
@@ -1808,12 +2081,16 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="392982240405515" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="392982240405515" type="Function">
                             <param id="0" name="Name">&quot;QueenMove&quot;</param>
                             <param id="1" name="Parameter {n}">spGrid.gX{###}spGrid.gY{###}-MovesThreshold{###}MovesThreshold</param>
                         </action>
-                        <action disabled="1" id="0" name="Call function" sid="641207042203338" type="Function">
-                            <param id="0" name="Name">&quot;HorseMove&quot;</param>
+                        <action disabled="1" id="0" name="Call function" sid="233158312786419" type="Function">
+                            <param id="0" name="Name">&quot;SimpleMove&quot;</param>
+                            <param id="1" name="Parameter {n}">spGrid.gX{###}spGrid.gY</param>
+                        </action>
+                        <action id="0" name="Call function" sid="396621222498866" type="Function">
+                            <param id="0" name="Name">&quot;HorseIA&quot;</param>
                             <param id="1" name="Parameter {n}">spGrid.gX{###}spGrid.gY</param>
                         </action>
                         <action id="-9" name="Set value" sid="150614082948341" type="System">
@@ -1880,118 +2157,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="454292822481096">
-            <conditions>
-                <condition id="0" name="On function" sid="847495725059501" type="Function">
-                    <param id="0" name="Name">&quot;ResetGame&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="921787150375900">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="329767756658103" type="System">
-                            <param id="0" name="Variable">Computer</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="256463663856424">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="938098931533249" type="System">
-                                    <param id="0" name="Variable">RandomStart</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-21" name="Reset global variables" sid="475710290797774" type="System" />
-                                <action id="-9" name="Set value" sid="937675516338631" type="System">
-                                    <param id="0" name="Variable">Computer</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="475403592153818" type="System">
-                                    <param id="0" name="Variable">RandomStart</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-26" name="Restart layout" sid="363750574208621" type="System" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="346985970172832">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="194867932671243" type="System">
-                                    <param id="0" name="Variable">RandomStart</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-21" name="Reset global variables" sid="571468441746688" type="System" />
-                                <action id="-9" name="Set value" sid="857967701287850" type="System">
-                                    <param id="0" name="Variable">Computer</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-26" name="Restart layout" sid="770647884488779" type="System" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="831321293040843">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="898091118777803" type="System">
-                            <param id="0" name="Variable">Computer</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="775550588226670">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="860899738334131" type="System">
-                                    <param id="0" name="Variable">RandomStart</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-21" name="Reset global variables" sid="228094262512165" type="System" />
-                                <action id="-9" name="Set value" sid="418498275365816" type="System">
-                                    <param id="0" name="Variable">RandomStart</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-26" name="Restart layout" sid="591903975058935" type="System" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="501340771911718">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="696307187354158" type="System">
-                                    <param id="0" name="Variable">RandomStart</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-21" name="Reset global variables" sid="806039893023727" type="System" />
-                                <action id="-26" name="Restart layout" sid="639328888742916" type="System" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="607524760110300">
-            <conditions>
-                <condition id="-3" name="On end of layout" sid="855133773597696" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="269169924519876" type="Function">
-                    <param id="0" name="Name">&quot;ResetGame&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
