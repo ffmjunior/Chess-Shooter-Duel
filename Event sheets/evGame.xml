@@ -1371,6 +1371,7 @@
                         <action id="-15" name="Set visible" sid="434813196819331" type="txTower">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="6" name="Show banner" sid="638892298576799" type="CocoonAds" />
                     </actions>
                     <sub-events>
                         <event-block sid="170336150683326">
@@ -1452,7 +1453,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="678608246948249" type="Function">
-                                    <param id="0" name="Name">&quot;ResetGame&quot;</param>
+                                    <param id="0" name="Name">&quot;ResetGameVariables&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -1480,6 +1481,7 @@
                                     <param id="0" name="Name">&quot;ChooseMove&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
+                                <action id="7" name="Hide banner" sid="539544607421150" type="CocoonAds" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -1880,7 +1882,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="454292822481096">
+        <event-block disabled="1" sid="454292822481096">
             <conditions>
                 <condition id="0" name="On function" sid="847495725059501" type="Function">
                     <param id="0" name="Name">&quot;ResetGame&quot;</param>
@@ -1888,7 +1890,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="921787150375900">
+                <event-block disabled="1" sid="921787150375900">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="329767756658103" type="System">
                             <param id="0" name="Variable">Computer</param>
@@ -1898,7 +1900,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="256463663856424">
+                        <event-block disabled="1" sid="256463663856424">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="938098931533249" type="System">
                                     <param id="0" name="Variable">RandomStart</param>
@@ -1919,7 +1921,7 @@
                                 <action id="-26" name="Restart layout" sid="363750574208621" type="System" />
                             </actions>
                         </event-block>
-                        <event-block sid="346985970172832">
+                        <event-block disabled="1" sid="346985970172832">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="194867932671243" type="System">
                                     <param id="0" name="Variable">RandomStart</param>
@@ -1938,7 +1940,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="831321293040843">
+                <event-block disabled="1" sid="831321293040843">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="898091118777803" type="System">
                             <param id="0" name="Variable">Computer</param>
@@ -1948,7 +1950,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="775550588226670">
+                        <event-block disabled="1" sid="775550588226670">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="860899738334131" type="System">
                                     <param id="0" name="Variable">RandomStart</param>
@@ -1965,7 +1967,7 @@
                                 <action id="-26" name="Restart layout" sid="591903975058935" type="System" />
                             </actions>
                         </event-block>
-                        <event-block sid="501340771911718">
+                        <event-block disabled="1" sid="501340771911718">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="696307187354158" type="System">
                                     <param id="0" name="Variable">RandomStart</param>
@@ -1982,7 +1984,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="607524760110300">
+        <event-block disabled="1" sid="607524760110300">
             <conditions>
                 <condition id="-3" name="On end of layout" sid="855133773597696" type="System" />
             </conditions>
@@ -1991,6 +1993,55 @@
                     <param id="0" name="Name">&quot;ResetGame&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="428260565636588">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="702612489785373" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="369507679477594" type="Function">
+                    <param id="0" name="Name">&quot;ResetGameVariables&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="525913803893761">
+            <conditions>
+                <condition id="0" name="On function" sid="561253944729109" type="Function">
+                    <param id="0" name="Name">&quot;ResetGameVariables&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="443505883111169" type="System">
+                    <param id="0" name="Variable">ClickedMove</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="916601479123283" type="System">
+                    <param id="0" name="Variable">Destroyed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="102383772812605" type="System">
+                    <param id="0" name="Variable">MovedPlayers</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="548764722259958" type="System">
+                    <param id="0" name="Variable">PlayerTurn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="456317958219746" type="System">
+                    <param id="0" name="Variable">Player_X</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="122878072614414" type="System">
+                    <param id="0" name="Variable">Player_Y</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="289196963144319" type="System">
+                    <param id="0" name="Variable">Winner</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="456797153500277" type="System" />
             </actions>
         </event-block>
     </events>

@@ -165,9 +165,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" disabled="1" sid="355628880643501" title="Global Audio">
+        <event-group description="" sid="355628880643501" title="Global Audio">
             <sub-events>
-                <event-block disabled="1" sid="127252589472478">
+                <event-block sid="127252589472478">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="577658050197705" type="System" />
                     </conditions>
@@ -177,7 +177,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="522026831478161">
+                <event-block sid="522026831478161">
                     <conditions>
                         <condition id="9" name="On item exists" sid="256867387904089" type="LocalStorage">
                             <param id="0" name="Key">&quot;Music&quot;</param>
@@ -189,7 +189,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="603116425410896">
+                <event-block sid="603116425410896">
                     <conditions>
                         <condition id="1" name="On item get" sid="283151021442820" type="LocalStorage">
                             <param id="0" name="Key">&quot;Music&quot;</param>
@@ -200,7 +200,7 @@
                             <param id="0" name="Variable">Music</param>
                             <param id="1" name="Value">LocalStorage.ItemValue</param>
                         </action>
-                        <action id="0" name="Call function" sid="631908008701950" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="631908008701950" type="Function">
                             <param id="0" name="Name">&quot;MusicChange&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
@@ -336,6 +336,29 @@
                         <action id="0" name="Call function" sid="497285044820095" type="Function">
                             <param id="0" name="Name">&quot;RandomSwitch&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="468638771944006" title="ADS">
+            <sub-events>
+                <event-block sid="788243888685863">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="628840391564429" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Load banner" sid="726927934231444" type="CocoonAds" />
+                        <action id="13" name="Load interstitial" sid="520107703366186" type="CocoonAds" />
+                    </actions>
+                </event-block>
+                <event-block sid="263715766397647">
+                    <conditions>
+                        <condition id="3" name="On banner loaded" sid="734984526190970" type="CocoonAds" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set banner layout" sid="665043266624833" type="CocoonAds">
+                            <param id="0" name="Layout">0</param>
                         </action>
                     </actions>
                 </event-block>

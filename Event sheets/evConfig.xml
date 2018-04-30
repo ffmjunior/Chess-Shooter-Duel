@@ -63,6 +63,9 @@
                         <action id="0" name="Set text" sid="314969976197279" type="txMenuHard">
                             <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;hard&quot;)</param>
                         </action>
+                        <action id="0" name="Set text" sid="371939024667663" type="txtMenuRandomStart">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;,&quot;random&quot;)</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

@@ -11,6 +11,7 @@
     <saved-with-version>25500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Ludei" id="ATPAds" version="1">Cocoon Ads</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
@@ -24,7 +25,6 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Scirra" id="XML" version="1">XML</plugin>
-        <plugin author="Scirra" id="admob" version="1">Admob Ads</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -585,9 +585,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="AdmobAds" sid="181943401787812">
-            <plugin id="admob" />
-        </object-type>
         <object-type name="buConfig" sid="591201459356516">
             <plugin id="Sprite" />
             <animation-folder>
@@ -789,6 +786,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="CocoonAds" sid="607781668691278">
+            <plugin id="ATPAds" />
+        </object-type>
     </object-folder>
     <families>
         <family name="tx" plugin-id="Text" sid="497129183118736">
@@ -873,19 +873,16 @@
         <global-instance type="LocalStorage" uid="234" />
         <global-instance type="Keyboard" uid="236" />
         <global-instance type="AJAX" uid="237" />
-        <global-instance type="AdmobAds" uid="94">
+        <global-instance type="CocoonAds" uid="105">
             <properties>
-                <overlap>Yes</overlap>
-                <test-mode>True</test-mode>
                 <android></android>
-                <banner-id-android></banner-id-android>
-                <interstitial-id-android></interstitial-id-android>
+                <banner-id-android>ca-app-pub-3940256099942544/6300978111</banner-id-android>
+                <banner-size-android>BANNER</banner-size-android>
+                <interstitial-id-android>ca-app-pub-3940256099942544/1033173712</interstitial-id-android>
                 <ios></ios>
                 <banner-id-ios></banner-id-ios>
+                <banner-size-ios>SMART</banner-size-ios>
                 <interstitial-id-ios></interstitial-id-ios>
-                <windows-phone></windows-phone>
-                <banner-id-wp8></banner-id-wp8>
-                <interstitial-id-wp8></interstitial-id-wp8>
             </properties>
         </global-instance>
     </global-instances>
