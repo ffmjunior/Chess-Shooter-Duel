@@ -198,7 +198,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1040</x>
-                        <y>280</y>
+                        <y>320</y>
                         <z>0</z>
                         <width>280</width>
                         <height>120</height>
@@ -225,7 +225,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1040</x>
-                        <y>480</y>
+                        <y>520</y>
                         <z>0</z>
                         <width>280</width>
                         <height>120</height>
@@ -240,16 +240,16 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1040</x>
-                        <y>480</y>
+                        <y>520</y>
                         <z>0</z>
-                        <width>360</width>
+                        <width>296</width>
                         <height>160</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -262,16 +262,16 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>1</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1040</x>
-                        <y>280</y>
+                        <y>320</y>
                         <z>0</z>
-                        <width>360</width>
+                        <width>296</width>
                         <height>160</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

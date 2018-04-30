@@ -11,11 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Menu</layout>
-        <layout order="2">Config</layout>
-        <layout order="5">Game</layout>
+        <layout active="1" order="2">Config</layout>
+        <layout order="4">Game</layout>
         <event-sheet order="1">evMenu</event-sheet>
         <event-sheet order="3">evConfig</event-sheet>
-        <event-sheet active="1" order="4">evGame</event-sheet>
+        <event-sheet order="5">evGame</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -26,13 +26,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1">
         <family expanded="0" name="tx" />
         <family expanded="0" name="txMenu" />
+        <family expanded="0" name="txRandom" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/spGrid/" />
@@ -64,7 +65,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/bgMenu/" />
         <folder expanded="1" path="animation-folder/buSelectLevel/" />
         <folder expanded="1" path="animation-folder/spLogo2/" />
-        <folder expanded="1" path="animation-folder/buSelectSound/" />
         <folder expanded="1" path="animation-folder/buSelectRandom/" />
     </folders-expanded>
 </c2uistate>

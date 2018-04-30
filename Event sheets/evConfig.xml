@@ -5,6 +5,7 @@
     <events>
         <include>evMenu</include>
         <variable constant="0" name="Language" sid="549682877004386" static="0" type="text">por</variable>
+        <variable constant="0" name="Music" sid="628816439065553" static="0" type="number">0</variable>
         <event-group description="" sid="866744370159450" title="Start Config">
             <sub-events>
                 <event-block sid="935030361881251">
@@ -14,146 +15,6 @@
                     <actions>
                         <action id="0" name="Call function" sid="197804168919491" type="Function">
                             <param id="0" name="Name">&quot;SetTextConfig&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="977712460894763">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="500747715948817" type="System">
-                                    <param id="0" name="Variable">RandomStart</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="636060272931170" type="buSelectRandom">
-                                    <param id="0" name="X">buRandomOn.X</param>
-                                    <param id="1" name="Y">buRandomOn.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="855912565705604">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="591620852881507" type="System">
-                                    <param id="0" name="Variable">RandomStart</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="566176298686094" type="buSelectRandom">
-                                    <param id="0" name="X">buRandomOff.X</param>
-                                    <param id="1" name="Y">buRandomOff.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="686494438508224">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="984716529601089" type="Touch">
-                            <param id="0" name="Object">buRandomOff</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="580227158817234" type="System">
-                            <param id="0" name="Variable">RandomStart</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="798795293166281" type="buSelectRandom">
-                            <param id="0" name="X">buRandomOff.X</param>
-                            <param id="1" name="Y">buRandomOff.Y</param>
-                        </action>
-                        <action id="0" name="Set item" sid="754793041298459" type="LocalStorage">
-                            <param id="0" name="Key">&quot;Random&quot;</param>
-                            <param id="1" name="Value">&quot;0&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="961496489713527">
-                    <conditions>
-                        <condition id="17" name="On tap object" sid="227289918169776" type="Touch">
-                            <param id="0" name="Object">buRandomOn</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="411358810107316" type="System">
-                            <param id="0" name="Variable">RandomStart</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="511796424371023" type="buSelectRandom">
-                            <param id="0" name="X">buRandomOn.X</param>
-                            <param id="1" name="Y">buRandomOn.Y</param>
-                        </action>
-                        <action id="0" name="Set item" sid="426179706320550" type="LocalStorage">
-                            <param id="0" name="Key">&quot;Random&quot;</param>
-                            <param id="1" name="Value">&quot;1&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="403405483797711">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="415858751806920" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">LEVELEASY</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="732442832551929" type="Function">
-                            <param id="0" name="Name">LevelEasy</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="622221308137301">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="285734919940533" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">LEVELMEDIUM</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="644418355252917" type="Function">
-                            <param id="0" name="Name">LevelMedium</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="583009205485834">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="859718906367091" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">LEVELHARD</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="565238885086120" type="Function">
-                            <param id="0" name="Name">LevelHard</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="416052471759454">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="613750670698955" type="Touch">
-                            <param id="0" name="Object">icLanguage</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="857075476270402" type="System">
-                            <param id="0" name="Variable">Language</param>
-                            <param id="1" name="Value">icLanguage.lang</param>
-                        </action>
-                        <action id="0" name="Set item" sid="958256845084701" type="LocalStorage">
-                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
-                            <param id="1" name="Value">Language</param>
-                        </action>
-                        <action id="0" name="Call function" sid="674870090125089" type="Function">
-                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -204,6 +65,153 @@
                         </action>
                     </actions>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="324966033444211" title="Language Config">
+            <sub-events>
+                <event-block sid="416052471759454">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="613750670698955" type="Touch">
+                            <param id="0" name="Object">icLanguage</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="857075476270402" type="System">
+                            <param id="0" name="Variable">Language</param>
+                            <param id="1" name="Value">icLanguage.lang</param>
+                        </action>
+                        <action id="0" name="Set item" sid="958256845084701" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SavedLang&quot;</param>
+                            <param id="1" name="Value">Language</param>
+                        </action>
+                        <action id="0" name="Call function" sid="674870090125089" type="Function">
+                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993387438744858">
+                    <conditions>
+                        <condition id="0" name="On function" sid="729884199897386" type="Function">
+                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="665926195169783" type="icLanguage">
+                            <param id="0" name="Animation">icLanguage.lang</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="222683532062463" type="Function">
+                            <param id="0" name="Name">&quot;ChangeText&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="669379569482289" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="542723036843247" type="Function">
+                            <param id="0" name="Name">&quot;SetTextConfig&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="958782923735758" type="Function">
+                            <param id="0" name="Name">&quot;SetTextMenu&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="256364496830615">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="117360298929374" type="icLanguage">
+                                    <param id="0" name="Instance variable">lang</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Language</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="422172774866014" type="buSelectLanguage">
+                                    <param id="0" name="X">icLanguage.X</param>
+                                    <param id="1" name="Y">icLanguage.Y</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="494992758657309" type="icLanguage">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="179184470779005">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="148119088012687" type="icLanguage">
+                                    <param id="0" name="Instance variable">lang</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">Language</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="613949293614192" type="icLanguage">
+                                    <param id="0" name="Opacity">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="105695237208603">
+                    <conditions>
+                        <condition id="0" name="On function" sid="512435853965500" type="Function">
+                            <param id="0" name="Name">&quot;GetText&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="605607670557958" type="Function">
+                            <param id="0" name="Value">XML.StringValue(&quot;/strings/string[@id=&apos;&quot; &amp; Function.Param(0)&amp;&quot;&apos;]/text()&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="223985952921656">
+                    <conditions>
+                        <condition id="0" name="On function" sid="483098840797468" type="Function">
+                            <param id="0" name="Name">&quot;ChangeText&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="867608877478994" type="AJAX">
+                            <param id="0" name="Tag">&quot;Search&quot;</param>
+                            <param id="1" name="URL">&quot;strings.&quot;&amp; Language &amp; &quot;.xml&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="527896522667934">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="584103539123988" type="AJAX">
+                            <param id="0" name="Tag">&quot;Search&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="658458214033920" type="XML">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="294265441367336">
+                    <conditions>
+                        <condition id="0" name="On function" sid="438673369584544" type="Function">
+                            <param id="0" name="Name">&quot;SetTextMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set web font" sid="420740000360671" type="tx">
+                            <param id="0" name="Family name">&quot;black_ops_oneregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;font.css&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="842345912879081" type="txSingle">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;, &quot;single&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="623174327566387" type="txVs">
+                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;, &quot;vs&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="418836354382106" title="Level Config">
+            <sub-events>
                 <event-block sid="605793460422273">
                     <conditions>
                         <condition id="17" name="On tap object" sid="575393884420769" type="Touch">
@@ -345,6 +353,227 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="803694639112222" title="Audio Config">
+            <sub-events>
+                <event-block sid="360545219918940">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="873919406089867" type="Touch">
+                            <param id="0" name="Object">buMusic</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="801985261706400" type="buMusic">
+                            <param id="0" name="Frame number">(Self.AnimationFrame +1)%4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="308777782638504" type="System">
+                            <param id="0" name="Variable">Music</param>
+                            <param id="1" name="Value">buMusic.AnimationFrame</param>
+                        </action>
+                        <action id="0" name="Set item" sid="850446823512748" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Music&quot;</param>
+                            <param id="1" name="Value">Music</param>
+                        </action>
+                        <action id="0" name="Call function" sid="334705301667755" type="Function">
+                            <param id="0" name="Name">&quot;MusicChange&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="471952055308133">
+                    <conditions>
+                        <condition id="0" name="On function" sid="665235048573746" type="Function">
+                            <param id="0" name="Name">&quot;MusicChange&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="636626835959452">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="917167258200882" type="buMusic">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="565741667681683" type="Audio">
+                                    <param id="0" name="Audio file">BgMusic1</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Music1&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="182389819498592">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="128305863279520" type="buMusic">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="106790069335154" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music1&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="880082855524632" type="Audio">
+                                    <param id="0" name="Audio file">BgMusic2</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Music2&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="648187097378214">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="824808889792977" type="buMusic">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="225273314502148" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music2&quot;</param>
+                                </action>
+                                <action id="0" name="Play" sid="383479118198274" type="Audio">
+                                    <param id="0" name="Audio file">BgMusic3</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Music3&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="700298194707362">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="363807154844365" type="buMusic">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="776240981337507" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music1&quot;</param>
+                                </action>
+                                <action id="6" name="Stop" sid="521580738896467" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music2&quot;</param>
+                                </action>
+                                <action id="6" name="Stop" sid="704029015378214" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music3&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="494550916155969" title="Random Config">
+            <sub-events>
+                <event-block sid="686494438508224">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="984716529601089" type="Touch">
+                            <param id="0" name="Object">buRandomOff</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="580227158817234" type="System">
+                            <param id="0" name="Variable">RandomStart</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set item" sid="754793041298459" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Random&quot;</param>
+                            <param id="1" name="Value">&quot;0&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="831944861532103" type="Function">
+                            <param id="0" name="Name">&quot;RandomSwitch&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="961496489713527">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="227289918169776" type="Touch">
+                            <param id="0" name="Object">buRandomOn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="411358810107316" type="System">
+                            <param id="0" name="Variable">RandomStart</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set item" sid="426179706320550" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Random&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="600928221539932" type="Function">
+                            <param id="0" name="Name">&quot;RandomSwitch&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="915503108303475">
+                    <conditions>
+                        <condition id="0" name="On function" sid="951903150647616" type="Function">
+                            <param id="0" name="Name">&quot;RandomSwitch&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="977712460894763">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="426103045675965" type="buRandomOn">
+                                    <param id="0" name="Instance variable">random</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">RandomStart</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="636060272931170" type="buSelectRandom">
+                                    <param id="0" name="X">buRandomOn.X</param>
+                                    <param id="1" name="Y">buRandomOn.Y</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="105521594943952" type="buRandomOn">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="855912565705604">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="845491137159974" type="buRandomOff">
+                                    <param id="0" name="Instance variable">random</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">RandomStart</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="566176298686094" type="buSelectRandom">
+                                    <param id="0" name="X">buRandomOff.X</param>
+                                    <param id="1" name="Y">buRandomOff.Y</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="368295790903317" type="buRandomOff">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="226573914970154">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="698240534144040" type="txRandom">
+                                    <param id="0" name="Instance variable">random</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">RandomStart</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="868950955537730" type="txRandom">
+                                    <param id="0" name="Opacity">40</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="525515373375186" title="Credits Config">
+            <sub-events>
                 <event-block disabled="1" sid="767720508862770">
                     <conditions>
                         <condition id="3" name="On touched object" sid="341615405546612" type="Touch">

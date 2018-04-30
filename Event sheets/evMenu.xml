@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>evMenu</name>
     <events>
+        <include>evConfig</include>
         <event-group description="" sid="391241580002451" title="Start Menu">
             <sub-events>
                 <event-block sid="929344335789428">
@@ -43,6 +44,16 @@
                         </action>
                         <action id="4" name="Preload" sid="815057679266063" type="Audio">
                             <param id="0" name="Audio file">Winner</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="584821462885686">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="982143223666445" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="915529004259715" type="buMusic">
+                            <param id="0" name="Frame number">Music</param>
                         </action>
                     </actions>
                 </event-block>
@@ -152,92 +163,48 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="682205436081505">
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="355628880643501" title="Global Audio">
+            <sub-events>
+                <event-block disabled="1" sid="127252589472478">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="772143978896010" type="Touch">
-                            <param id="0" name="Object">buMusic</param>
+                        <condition id="-2" name="On start of layout" sid="577658050197705" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="698410347976138" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="522026831478161">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="256867387904089" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Music&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="386355445624575" type="buMusic">
-                            <param id="0" name="Frame number">(Self.AnimationFrame + 1)%4</param>
+                        <action id="1" name="Get item" sid="362338144351469" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Music&quot;</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="333096063236715">
-                            <conditions>
-                                <condition id="3" name="Compare frame" sid="309386029464767" type="buMusic">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Number">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="181088834888670" type="Audio">
-                                    <param id="0" name="Audio file">BgMusic1</param>
-                                    <param id="2" name="Loop">1</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;Music1&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="883303524147796">
-                            <conditions>
-                                <condition id="3" name="Compare frame" sid="343771916810933" type="buMusic">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Number">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="6" name="Stop" sid="298363861963901" type="Audio">
-                                    <param id="0" name="Tag">&quot;Music1&quot;</param>
-                                </action>
-                                <action id="0" name="Play" sid="433313952888936" type="Audio">
-                                    <param id="0" name="Audio file">BgMusic2</param>
-                                    <param id="2" name="Loop">1</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;Music2&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="265685309071317">
-                            <conditions>
-                                <condition id="3" name="Compare frame" sid="763214332879813" type="buMusic">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Number">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="6" name="Stop" sid="911183796626685" type="Audio">
-                                    <param id="0" name="Tag">&quot;Music2&quot;</param>
-                                </action>
-                                <action id="0" name="Play" sid="858261075552998" type="Audio">
-                                    <param id="0" name="Audio file">BgMusic3</param>
-                                    <param id="2" name="Loop">1</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;Music3&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="422591560916891">
-                            <conditions>
-                                <condition id="3" name="Compare frame" sid="267920883151633" type="buMusic">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Number">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="6" name="Stop" sid="783155163026389" type="Audio">
-                                    <param id="0" name="Tag">&quot;Music1&quot;</param>
-                                </action>
-                                <action id="6" name="Stop" sid="398940556704382" type="Audio">
-                                    <param id="0" name="Tag">&quot;Music2&quot;</param>
-                                </action>
-                                <action id="6" name="Stop" sid="923687746824607" type="Audio">
-                                    <param id="0" name="Tag">&quot;Music3&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="603116425410896">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="283151021442820" type="LocalStorage">
+                            <param id="0" name="Key">&quot;Music&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="169219448124208" type="System">
+                            <param id="0" name="Variable">Music</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="631908008701950" type="Function">
+                            <param id="0" name="Name">&quot;MusicChange&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -283,124 +250,6 @@
                         <action id="0" name="Call function" sid="474499148252511" type="Function">
                             <param id="0" name="Name">&quot;ChangeLang&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="605442185619417">
-                    <conditions>
-                        <condition id="0" name="On function" sid="600813111596582" type="Function">
-                            <param id="0" name="Name">&quot;GetText&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set return value" sid="350370069072757" type="Function">
-                            <param id="0" name="Value">XML.StringValue(&quot;/strings/string[@id=&apos;&quot; &amp; Function.Param(0)&amp;&quot;&apos;]/text()&quot;)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="106129717518748">
-                    <conditions>
-                        <condition id="0" name="On function" sid="477989739498737" type="Function">
-                            <param id="0" name="Name">&quot;ChangeText&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Request URL" sid="712949938972343" type="AJAX">
-                            <param id="0" name="Tag">&quot;Search&quot;</param>
-                            <param id="1" name="URL">&quot;strings.&quot;&amp; Language &amp; &quot;.xml&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="474249907557632">
-                    <conditions>
-                        <condition id="0" name="On completed" sid="133983873136325" type="AJAX">
-                            <param id="0" name="Tag">&quot;Search&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Load" sid="886291660417406" type="XML">
-                            <param id="0" name="XML">AJAX.LastData</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="225196471780890">
-                    <conditions>
-                        <condition id="0" name="On function" sid="840343464089076" type="Function">
-                            <param id="0" name="Name">&quot;ChangeLang&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="915381430966208" type="icLanguage">
-                            <param id="0" name="Animation">icLanguage.lang</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="480175472215815" type="Function">
-                            <param id="0" name="Name">&quot;ChangeText&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-16" name="Wait" sid="644522653219789" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="500737752373773" type="Function">
-                            <param id="0" name="Name">&quot;SetTextConfig&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="350780428333859" type="Function">
-                            <param id="0" name="Name">&quot;SetTextMenu&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="979808476870292">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="455362398277551" type="icLanguage">
-                                    <param id="0" name="Instance variable">lang</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Language</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="822016990922769" type="buSelectLanguage">
-                                    <param id="0" name="X">icLanguage.X</param>
-                                    <param id="1" name="Y">icLanguage.Y</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="410310155096660" type="icLanguage">
-                                    <param id="0" name="Opacity">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="924543039866907">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="705119700045606" type="icLanguage">
-                                    <param id="0" name="Instance variable">lang</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">Language</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Set opacity" sid="364140778732272" type="icLanguage">
-                                    <param id="0" name="Opacity">40</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="680183124249050">
-                    <conditions>
-                        <condition id="0" name="On function" sid="429616097158010" type="Function">
-                            <param id="0" name="Name">&quot;SetTextMenu&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="5" name="Set web font" sid="928655672771239" type="tx">
-                            <param id="0" name="Family name">&quot;black_ops_oneregular&quot;</param>
-                            <param id="1" name="CSS URL">&quot;font.css&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="845372971576677" type="txSingle">
-                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;, &quot;single&quot;)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="683170073153419" type="txVs">
-                            <param id="0" name="Text">Function.Call(&quot;GetText&quot;, &quot;vs&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -483,6 +332,10 @@
                         <action id="-9" name="Set value" sid="559898963824799" type="System">
                             <param id="0" name="Variable">RandomStart</param>
                             <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="0" name="Call function" sid="497285044820095" type="Function">
+                            <param id="0" name="Name">&quot;RandomSwitch&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>

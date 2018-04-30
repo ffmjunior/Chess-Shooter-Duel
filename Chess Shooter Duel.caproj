@@ -2,7 +2,7 @@
 <c2project>
     <name>Chess Shooter Duel</name>
     <description>Chess shooter duel boardgame</description>
-    <version>2018.04.14.14.44</version>
+    <version>2018.04.24.01.50</version>
     <author>Gray Side Games</author>
     <author-email>contato@grayside.net</author-email>
     <author-website>http://graysite.net</author-website>
@@ -370,7 +370,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904213563187257" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Assets FREEBUNDLE\UI Onscreen Controls\lineDark\lineDark12.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.0208333" y="0.0208333" />
                             <point x="0.5" y="0" />
@@ -382,7 +382,7 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Assets FREEBUNDLE\UI Onscreen Controls\lineDark\lineDark12.png">
                         <collision-poly>
                             <point x="0.0208333" y="0.0208333" />
                             <point x="0.5" y="0" />
@@ -461,7 +461,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="657123135257388" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Assets FREEBUNDLE\UI Onscreen Controls\lineDark\lineDark37.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\btSelect3.png">
                         <collision-poly>
                             <point x="0.0208333" y="0.0208333" />
                             <point x="0.5" y="0" />
@@ -569,9 +569,6 @@
                     <frame duration="1" hotspotX="0" hotspotY="0.502008" original-source="D:\Gray Side Games\Gray Side Games logo.png" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="txBanner" sid="250122546365490">
-            <plugin id="Text" />
         </object-type>
         <object-type name="bgScenario" sid="342201741766959">
             <plugin id="Sprite" />
@@ -717,13 +714,25 @@
         <object-type name="buSelectLevel" sid="702128951072689">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="617370995686811" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Gray Side\Pictures\border.png">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="617370995686811" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\btSelect3.png">
                         <collision-poly>
                             <point x="0.00469484" y="0.0102041" />
                             <point x="0.992958" y="0.0153061" />
                             <point x="0.996479" y="0.992347" />
                             <point x="0.00704225" y="0.984694" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Free\UI Pack\PNG\glassPanel_cornerTL.png">
+                        <collision-poly>
+                            <point x="0.06" y="0.06" />
+                            <point x="0.5" y="0" />
+                            <point x="0.98" y="0.02" />
+                            <point x="1" y="0.5" />
+                            <point x="0.98" y="0.98" />
+                            <point x="0.5" y="1" />
+                            <point x="0.02" y="0.98" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -755,28 +764,6 @@
         <object-type name="buRandomOff" sid="269164103828556">
             <plugin id="Text" />
         </object-type>
-        <object-type name="buSelectSound" sid="616448606091600">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="391981517111705" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Assets FREEBUNDLE\UI Onscreen Controls\lineDark\lineDark37.png">
-                        <collision-poly>
-                            <point x="0.0208333" y="0.0208333" />
-                            <point x="0.5" y="0" />
-                            <point x="0.979167" y="0.0208333" />
-                            <point x="1" y="0.5" />
-                            <point x="0.979167" y="0.979167" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0208333" y="0.979167" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="debugLevel" sid="938277414170080">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="buTest" sid="589943405361282">
             <plugin id="Text" />
         </object-type>
@@ -787,7 +774,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="367316867674575" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side Games\Assets FREEBUNDLE\UI Onscreen Controls\lineDark\lineDark37.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\btSelect3.png">
                         <collision-poly>
                             <point x="0.0208333" y="0.0208333" />
                             <point x="0.5" y="0" />
@@ -808,7 +795,6 @@
             <members>
                 <member>buRandomOff</member>
                 <member>buRandomOn</member>
-                <member>txBanner</member>
                 <member>txBishop</member>
                 <member>txDesign</member>
                 <member>txDevelop</member>
@@ -839,6 +825,15 @@
             </members>
             <instance-variables>
                 <instance-variable name="level" sid="146684953452192" type="number" />
+            </instance-variables>
+        </family>
+        <family name="txRandom" plugin-id="Text" sid="927686660045569">
+            <members>
+                <member>buRandomOff</member>
+                <member>buRandomOn</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="random" sid="227784252306448" type="number" />
             </instance-variables>
         </family>
     </families>
