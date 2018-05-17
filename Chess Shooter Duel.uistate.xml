@@ -10,9 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Menu</layout>
+        <layout order="0">Menu</layout>
         <layout order="2">Config</layout>
-        <layout order="4">Game</layout>
+        <layout active="1" order="4">Game</layout>
         <event-sheet order="1">evMenu</event-sheet>
         <event-sheet order="3">evConfig</event-sheet>
         <event-sheet order="5">evGame</event-sheet>
@@ -24,7 +24,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="0" name="tx" />
+        <family expanded="1" name="tx" />
         <family expanded="0" name="txMenu" />
         <family expanded="0" name="txRandom" />
     </families-expanded>
@@ -66,5 +66,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/buSelectLevel/" />
         <folder expanded="1" path="animation-folder/spLogo2/" />
         <folder expanded="1" path="animation-folder/buSelectRandom/" />
+        <folder expanded="1" path="animation-folder/spHand/" />
+        <folder expanded="1" path="animation-folder/spPhone/" />
+        <folder expanded="1" path="animation-folder/spTutorial/" />
+        <folder expanded="1" path="animation-folder/buSelectTutorial/" />
     </folders-expanded>
 </c2uistate>

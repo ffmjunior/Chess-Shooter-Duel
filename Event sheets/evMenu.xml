@@ -52,7 +52,7 @@
                         <condition id="-1" name="Every tick" sid="982143223666445" type="System" />
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="915529004259715" type="buMusic">
+                        <action disabled="1" id="5" name="Set frame" sid="915529004259715" type="buMusic">
                             <param id="0" name="Frame number">Music</param>
                         </action>
                     </actions>
@@ -341,9 +341,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="468638771944006" title="ADS">
+        <event-group description="" disabled="1" sid="468638771944006" title="ADS">
             <sub-events>
-                <event-block sid="788243888685863">
+                <event-block disabled="1" sid="788243888685863">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="628840391564429" type="System" />
                     </conditions>
@@ -352,7 +352,7 @@
                         <action id="13" name="Load interstitial" sid="520107703366186" type="CocoonAds" />
                     </actions>
                 </event-block>
-                <event-block sid="263715766397647">
+                <event-block disabled="1" sid="263715766397647">
                     <conditions>
                         <condition id="3" name="On banner loaded" sid="734984526190970" type="CocoonAds" />
                     </conditions>

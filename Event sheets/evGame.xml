@@ -18,6 +18,7 @@
         <variable comment="Used by IA" constant="0" name="Player_X" sid="107362187202564" static="0" type="number">0</variable>
         <variable comment="Used by IA" constant="0" name="Player_Y" sid="500441133362038" static="0" type="number">0</variable>
         <variable constant="0" name="RandomStart" sid="622010552726042" static="0" type="number">0</variable>
+        <variable constant="0" name="Tutorial" sid="140197731286179" static="0" type="number">0</variable>
         <variable constant="0" name="Winner" sid="741122833161438" static="0" type="number">-1</variable>
         <event-group description="" sid="272498897240374" title="Functions">
             <sub-events>
@@ -27,27 +28,31 @@
                             <param id="0" name="Name">&quot;ChooseMove&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="730805988925404" type="txBishop">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="153933695293041" type="txHorse">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="252763836753800" type="txQueen">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="977045693037284" type="txTower">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="714714517767889" type="buMoves">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="639057168178849" type="System">
-                            <param id="0" name="Seconds">0.5</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="612121417035361">
+                            <conditions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="730805988925404" type="txBishop">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="153933695293041" type="txHorse">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="252763836753800" type="txQueen">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="977045693037284" type="txTower">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="714714517767889" type="buMoves">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="639057168178849" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="524198215868293">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="850585498420937" type="System">
@@ -150,6 +155,10 @@
                                     <param id="0" name="Variable">ClickedMove</param>
                                     <param id="1" name="Value">-1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="895186393208869" type="Function">
+                                    <param id="0" name="Name">&quot;CreateHand2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -160,12 +169,18 @@
                             <param id="0" name="Name">&quot;GoToStartLayout&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-21" name="Reset global variables" sid="354111456761789" type="System" />
-                        <action id="-2" name="Go to layout" sid="945985270078887" type="System">
-                            <param id="0" name="Layout">Menu</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="433659767534908">
+                            <conditions />
+                            <actions>
+                                <action id="-21" name="Reset global variables" sid="354111456761789" type="System" />
+                                <action id="-2" name="Go to layout" sid="945985270078887" type="System">
+                                    <param id="0" name="Layout">Menu</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="975263966086561">
                     <conditions>
@@ -173,38 +188,48 @@
                             <param id="0" name="Name">&quot;ResetGameVariables&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="252095958562309" type="System">
-                            <param id="0" name="Variable">ClickedMove</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="908215126892039" type="System">
-                            <param id="0" name="Variable">Destroyed</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="493575159641210" type="System">
-                            <param id="0" name="Variable">MovedPlayers</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="192969545065087" type="System">
-                            <param id="0" name="Variable">PlayerTurn</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="955065962301864" type="System">
-                            <param id="0" name="Variable">Player_X</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="158136962766844" type="System">
-                            <param id="0" name="Variable">Player_Y</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="651926340181318" type="System">
-                            <param id="0" name="Variable">Winner</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
-                        <action id="-26" name="Restart layout" sid="944962868197058" type="System" />
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="312888608934356">
+                            <conditions>
+                                <condition id="-41" name="Is between angles" sid="193815844524187" type="System">
+                                    <param id="0" name="Angle">0</param>
+                                    <param id="1" name="First angle">0</param>
+                                    <param id="2" name="Second angle">45</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="252095958562309" type="System">
+                                    <param id="0" name="Variable">ClickedMove</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="908215126892039" type="System">
+                                    <param id="0" name="Variable">Destroyed</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="493575159641210" type="System">
+                                    <param id="0" name="Variable">MovedPlayers</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="192969545065087" type="System">
+                                    <param id="0" name="Variable">PlayerTurn</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="955065962301864" type="System">
+                                    <param id="0" name="Variable">Player_X</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="158136962766844" type="System">
+                                    <param id="0" name="Variable">Player_Y</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="651926340181318" type="System">
+                                    <param id="0" name="Variable">Winner</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="944962868197058" type="System" />
+                            </actions>
+                        </event-block>
                         <event-block sid="925137835440243">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="376218325907599" type="System">
@@ -335,6 +360,26 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="724332611593681">
+                    <conditions>
+                        <condition id="0" name="On function" sid="204463150572114" type="Function">
+                            <param id="0" name="Name">&quot;DestroyAllHands&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="974632710405274">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="802738733653174" type="System">
+                                    <param id="0" name="Object">spHand</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="154112966427832" type="spHand" />
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -703,6 +748,10 @@
                                     <conditions />
                                     <actions>
                                         <action id="-24" name="Move to top" sid="365408607243960" type="spPlayers" />
+                                        <action id="0" name="Call function" sid="203937798417698" type="Function">
+                                            <param id="0" name="Name">&quot;CreateHand&quot;</param>
+                                            <param id="1" name="Parameter {n}">200{###}200{###}200</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1197,6 +1246,18 @@
                                 <action id="-9" name="Destroy" sid="867512292647964" type="spGridMove" />
                             </actions>
                         </event-block>
+                        <event-block disabled="1" sid="936162600345121">
+                            <conditions>
+                                <condition id="-16" name="Pick random instance" sid="248396699206167" type="System">
+                                    <param id="0" name="Object">spGridMove</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="965124435293194" type="spDebug">
+                                    <param id="0" name="Text">spGridMove.X &amp; &quot; - &quot; &amp;  spGridMove.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="376870228000739">
@@ -1204,24 +1265,35 @@
                         <condition id="0" name="On function" sid="388946545813577" type="Function">
                             <param id="0" name="Name">&quot;WaitRotation&quot;</param>
                         </condition>
-                        <condition id="-9" inverted="1" name="Layer is visible" sid="713081681036190" type="System">
-                            <param id="0" name="Layer">&quot;Display&quot;</param>
-                        </condition>
-                        <condition id="3" name="Compare frame" sid="466227944515813" type="spPlayers">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Number">PlayerTurn</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-41" name="Wait for signal" sid="489766537288452" type="System">
-                            <param id="0" name="Tag">&quot;SignalRotation&quot;</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="554354630696595" type="buCrossair" />
-                        <action id="0" name="Call function" sid="409258238936460" type="Function">
-                            <param id="0" name="Name">&quot;NextPlayer&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="556831591336315">
+                            <conditions>
+                                <condition id="-9" inverted="1" name="Layer is visible" sid="713081681036190" type="System">
+                                    <param id="0" name="Layer">&quot;Display&quot;</param>
+                                </condition>
+                                <condition id="3" name="Compare frame" sid="466227944515813" type="spPlayers">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">PlayerTurn</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-41" name="Wait for signal" sid="489766537288452" type="System">
+                                    <param id="0" name="Tag">&quot;SignalRotation&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="924029044271548" type="Function">
+                                    <param id="0" name="Name">&quot;DestroyAllHands&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="554354630696595" type="buCrossair" />
+                                <action id="0" name="Call function" sid="409258238936460" type="Function">
+                                    <param id="0" name="Name">&quot;NextPlayer&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="316469591421634">
                     <conditions>
@@ -1229,16 +1301,22 @@
                             <param id="0" name="Name">&quot;NextPlayer&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="795313092982441" type="System">
-                            <param id="0" name="Variable">PlayerTurn</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="241032511191917" type="Function">
-                            <param id="0" name="Name">&quot;DisplayTurn&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="508368821905901">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="795313092982441" type="System">
+                                    <param id="0" name="Variable">PlayerTurn</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="241032511191917" type="Function">
+                                    <param id="0" name="Name">&quot;DisplayTurn&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="650810554239381">
                     <conditions>
@@ -1246,16 +1324,24 @@
                             <param id="0" name="Name">&quot;DisplayTurn&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-4" name="Set layer visible" sid="238127877276709" type="System">
-                            <param id="0" name="Layer">&quot;Display&quot;</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="444221908539734" type="huTurns">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="333517861520719">
+                            <conditions />
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="238127877276709" type="System">
+                                    <param id="0" name="Layer">&quot;Display&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="444221908539734" type="huTurns">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="180416762641721" type="Function">
+                                    <param id="0" name="Name">&quot;CreateHand&quot;</param>
+                                    <param id="1" name="Parameter {n}">huDisplay.X{###}huDisplay.Y{###}180{###}&quot;Clique na faixa para avançar o turno&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="718185846819302">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="469066599201631" type="System">
@@ -1428,6 +1514,115 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="685548999003337">
+                    <conditions>
+                        <condition id="0" name="On function" sid="628078451559291" type="Function">
+                            <param id="0" name="Name">&quot;CreateHand&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="Hand_X" sid="533440858960760" static="0" type="number">0</variable>
+                        <variable constant="0" name="Hand_Y" sid="722123039104750" static="0" type="number">0</variable>
+                        <variable constant="0" name="Hand_degrees" sid="237137804510530" static="0" type="number">0</variable>
+                        <variable constant="0" name="Tip" sid="486616385601868" static="0" type="text"></variable>
+                        <event-block sid="939416411631867">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="289198902124155" type="System">
+                                    <param id="0" name="Variable">Tutorial</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="402471597411824" type="System">
+                                    <param id="0" name="Variable">Hand_X</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="430142350512891" type="System">
+                                    <param id="0" name="Variable">Hand_Y</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="310402567060526" type="System">
+                                    <param id="0" name="Variable">Hand_degrees</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="379715845647611" type="System">
+                                    <param id="0" name="Variable">Tip</param>
+                                    <param id="1" name="Value">Function.Param(3)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="812520571382025" type="System">
+                                    <param id="0" name="Object to create">spHand</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="X">Hand_X</param>
+                                    <param id="3" name="Y">Hand_Y</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="784214821638178" type="spHand">
+                                    <param id="0" name="Angle">Hand_degrees</param>
+                                </action>
+                                <action id="0" name="Set text" sid="545731552750169" type="spTutorialTxt">
+                                    <param id="0" name="Text">Tip</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="988686950433409">
+                    <conditions>
+                        <condition id="0" name="On function" sid="333066504196786" type="Function">
+                            <param id="0" name="Name">&quot;CreateHand2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="Hand_X" sid="503392318444733" static="0" type="number">0</variable>
+                        <variable constant="0" name="Hand_Y" sid="739933244451788" static="0" type="number">0</variable>
+                        <variable constant="0" name="Hand_degrees" sid="184867583719494" static="0" type="number">0</variable>
+                        <variable constant="0" name="Tip" sid="239221664439147" static="0" type="text"></variable>
+                        <event-block disabled="1" sid="439039034252099">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="406992777676619" type="System">
+                                    <param id="0" name="Variable">Hand_X</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="774781523363221" type="System">
+                                    <param id="0" name="Variable">Hand_Y</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="195614387741994" type="System">
+                                    <param id="0" name="Variable">Hand_degrees</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="420842205380037" type="System">
+                                    <param id="0" name="Variable">Tip</param>
+                                    <param id="1" name="Value">Function.Param(3)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="189379604118950" type="System">
+                                    <param id="0" name="Object to create">spHand</param>
+                                    <param id="1" name="Layer">4</param>
+                                    <param id="2" name="X">Hand_X</param>
+                                    <param id="3" name="Y">Hand_Y</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="688723531672518" type="spHand">
+                                    <param id="0" name="Angle">Hand_degrees</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="172275157338690">
+                            <conditions>
+                                <condition id="-16" name="Pick random instance" sid="395882603941850" type="System">
+                                    <param id="0" name="Object">spGridMove</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="948833143534258" type="spDebug">
+                                    <param id="0" name="Text">spGridMove.X &amp; &quot; - &quot; &amp;  spGridMove.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="822007360198490" title="Start Game">
@@ -1470,6 +1665,14 @@
                             <param id="4" name="Volume">0</param>
                             <param id="2" name="Tag (optional)">&quot;Turn&quot;</param>
                         </action>
+                        <action id="0" name="Call function" sid="384316365939306" type="Function">
+                            <param id="0" name="Name">&quot;DestroyAllHands&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="823070866684129" type="Function">
+                            <param id="0" name="Name">&quot;CreateHand&quot;</param>
+                            <param id="1" name="Parameter {n}">huDisplay.X{###}huDisplay.Y{###}180{###}&quot;Clique na faixa para avançar o turno&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="152350239442974">
@@ -1503,22 +1706,142 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="702253211135532">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="733771356432238" type="System">
+                                    <param id="0" name="Object">spGridMove</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="260757096955811" type="spGridMove" />
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="150655344814559">
+                <event-block sid="743522596449939">
                     <conditions>
-                        <condition id="-1" name="Every tick" sid="457737681839494" type="System" />
-                        <condition id="3" name="Compare frame" sid="234751853529192" type="spPlayers">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Number">PlayerTurn</param>
+                        <condition id="17" name="On tap object" sid="304721515996480" type="Touch">
+                            <param id="0" name="Object">spTutorial</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="242688344418679" type="spCamera">
-                            <param id="0" name="X">lerp(Self.X, spPlayers.X, 0.1)</param>
-                            <param id="1" name="Y">lerp(Self.Y, spPlayers.Y, 0.1)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="429649718533247">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="320445856720289" type="System">
+                                    <param id="0" name="Variable">Tutorial</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="653684411469050" type="spTutorialOn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="962196935479855" type="buSelectTutorial">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="122685360648149" type="spTutorial">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="388146559933109">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="335173388633741" type="spTutorialOn" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="975031743046045" type="System">
+                                    <param id="0" name="Variable">Tutorial</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="428482002073751" type="spTutorialOn">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="227629567546954">
+                            <conditions>
+                                <condition disabled="1" id="-22" name="Else" sid="668056196573485" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="249597548127465" type="System">
+                                    <param id="0" name="Variable">Tutorial</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="281232283270605" type="spTutorialOn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="865547565890568">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="519143394786914" type="Touch">
+                            <param id="0" name="Object">spTutorialOn</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="461122346440398">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="131932934240482" type="System">
+                                    <param id="0" name="Variable">Tutorial</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="938729241155191" type="spTutorialOn">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="659054624345178" type="buSelectTutorial">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="201175678348291" type="spTutorial">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="868194997921780">
+                            <conditions>
+                                <condition disabled="1" id="-9" name="Is visible" sid="571678776331710" type="spTutorialOn" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="765737078079586" type="System">
+                                    <param id="0" name="Variable">Tutorial</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="382085359155313" type="spTutorialOn">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="872860995165254">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="116186707669689" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="839408327340929" type="System">
+                                    <param id="0" name="Variable">Tutorial</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="294814337336995" type="spTutorialOn">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="920600128812346">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="101684619583816" type="Touch">
+                            <param id="0" name="Object">spTutorial</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="586863466582553" type="System">
+                            <param id="0" name="Variable">Tutorial</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
                 <event-block sid="267680770653664">
                     <conditions>
@@ -1613,7 +1936,11 @@
                         <action id="-15" name="Set visible" sid="434813196819331" type="txTower">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="6" name="Show banner" sid="638892298576799" type="CocoonAds" />
+                        <action disabled="1" id="6" name="Show banner" sid="638892298576799" type="CocoonAds" />
+                        <action id="0" name="Call function" sid="488484287943949" type="Function">
+                            <param id="0" name="Name">&quot;DestroyAllHands&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="170336150683326">
@@ -1640,6 +1967,21 @@
                                 </action>
                                 <action id="-24" name="Move to top" sid="218335949903843" type="buMoves" />
                             </actions>
+                            <sub-events>
+                                <event-block sid="448554007743292">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="381761697532657" type="System">
+                                            <param id="0" name="Object">buMoves</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="954688430276399" type="Function">
+                                            <param id="0" name="Name">&quot;CreateHand&quot;</param>
+                                            <param id="1" name="Parameter {n}">buMoves.X{###}buMoves.Y{###}90{###}&quot;Escolha um movimento&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="876807276090983">
                             <conditions>
@@ -1670,6 +2012,21 @@
                                 </action>
                                 <action id="-24" name="Move to top" sid="170407456675324" type="buMoves" />
                             </actions>
+                            <sub-events>
+                                <event-block sid="572528526526849">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="853816742884200" type="System">
+                                            <param id="0" name="Object">buMoves</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="139527370234302" type="Function">
+                                            <param id="0" name="Name">&quot;CreateHand&quot;</param>
+                                            <param id="1" name="Parameter {n}">buMoves.X{###}buMoves.Y{###}90{###}&quot;Escolha um movimento&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="719027314387517">
                             <conditions>
@@ -1725,6 +2082,10 @@
                                 </action>
                                 <action id="0" name="Call function" sid="420900044374107" type="Function">
                                     <param id="0" name="Name">&quot;ChooseMove&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="755601891168288" type="Function">
+                                    <param id="0" name="Name">&quot;DestroyAllHands&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -1790,6 +2151,33 @@
                             <param id="0" name="Name">&quot;WaitRotation&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="335126527446999" type="buCrossair">
+                            <param id="0" name="Object">spHand</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="413525887708866" type="System">
+                            <param id="0" name="Object to create">spHand</param>
+                            <param id="1" name="Layer">4</param>
+                            <param id="2" name="X">buCrossair.X</param>
+                            <param id="3" name="Y">buCrossair.Y</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="606558749731751" type="spHand">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="0" name="Set text" sid="127285164728673" type="spTutorialTxt">
+                            <param id="0" name="Text">&quot;Gire para ajustar a mira&quot;</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="764715205296673" type="spHand">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine2" id="0" name="Set active" sid="384710192169969" type="spHand">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="430362796264615" type="Function">
+                            <param id="0" name="Name">&quot;DestroyAllHands&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="303892188719741">
@@ -1841,7 +2229,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Hide banner" sid="262630277702900" type="CocoonAds" />
+                        <action disabled="1" id="7" name="Hide banner" sid="262630277702900" type="CocoonAds" />
                         <action id="-15" name="Set visible" sid="818041665234035" type="txBishop">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -2126,7 +2514,7 @@
                                     <param id="0" name="Name">&quot;NextPlayer&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="7" name="Hide banner" sid="141078390774480" type="CocoonAds" />
+                                <action disabled="1" id="7" name="Hide banner" sid="141078390774480" type="CocoonAds" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -2146,7 +2534,17 @@
                     <param id="0" name="Name">&quot;GoToStartLayout&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action id="7" name="Hide banner" sid="727692556542932" type="CocoonAds" />
+                <action disabled="1" id="7" name="Hide banner" sid="727692556542932" type="CocoonAds" />
+            </actions>
+        </event-block>
+        <event-block sid="499177277953913">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="777462321466164" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="629113208248919" type="spDebug">
+                    <param id="0" name="Text">Tutorial</param>
+                </action>
             </actions>
         </event-block>
     </events>

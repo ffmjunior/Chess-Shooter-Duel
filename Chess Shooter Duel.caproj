@@ -342,6 +342,7 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="636387282072244" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Game Design\Assets FREEBUNDLE\UI Onscreen Controls\lineDark\lineDark02.png">
+                        <image-point name="Aim" x="0.875" y="0.515625" />
                         <collision-poly>
                             <point x="0.484375" y="1" />
                             <point x="0.515625" y="0.84375" />
@@ -789,12 +790,99 @@
         <object-type name="CocoonAds" sid="607781668691278">
             <plugin id="ATPAds" />
         </object-type>
+        <object-type name="spHand" sid="967243796466631">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="112039738664240">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="669465986239477">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="502092571277911" speed="5">
+                    <frame duration="1" hotspotX="0.419643" hotspotY="0.974609" original-source="C:\Users\junior kbca\Pictures\gray side\hand.png">
+                        <collision-poly>
+                            <point x="0.294643" y="0.257813" />
+                            <point x="0.294643" y="0" />
+                            <point x="0.921875" y="0.00976563" />
+                            <point x="1" y="0.445313" />
+                            <point x="0.569197" y="0.966797" />
+                            <point x="0.310268" y="0.980469" />
+                            <point x="0.0312499" y="0.638672" />
+                            <point x="0" y="0.439453" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spTutorialTxt" sid="892005577157294">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="spPhone" sid="141342792362481">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="756138233881467" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\junior kbca\Pictures\gray side\phone.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spTutorial" sid="934727772928140">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411103807424093" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\junior kbca\Pictures\gray side\question-circle.png">
+                        <collision-poly>
+                            <point x="0.147177" y="0.147177" />
+                            <point x="0.5" y="0" />
+                            <point x="0.852823" y="0.147177" />
+                            <point x="1" y="0.5" />
+                            <point x="0.852823" y="0.852823" />
+                            <point x="0.5" y="1" />
+                            <point x="0.147177" y="0.852823" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spDebug" sid="435717027852789">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextBox2" sid="746419526104811">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="spTutorialOn" sid="726573447581630">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="buSelectTutorial" sid="378136374459714">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="946649474696020" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Gray Side\Assets Gray Side\Assets CS\btSelect3.png">
+                        <collision-poly>
+                            <point x="0.0208333" y="0.0208333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.979167" y="0.0208333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.979167" y="0.979167" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0208333" y="0.979167" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="tx" plugin-id="Text" sid="497129183118736">
             <members>
                 <member>buRandomOff</member>
                 <member>buRandomOn</member>
+                <member>buTest</member>
+                <member>spTutorialTxt</member>
                 <member>txBishop</member>
                 <member>txDesign</member>
                 <member>txDevelop</member>
